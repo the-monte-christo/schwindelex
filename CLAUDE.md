@@ -21,7 +21,8 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 - M5 Wortliste: ✅ `data/words.json` (264 Wörter, vom Nutzer gestrichen). **Nie ansehen/ausgeben** (Spoiler).
 - M6 Härtung: ✅ Verbindungslimits (60/IP, 2000 gesamt), Security-Header/CSP, `/healthz` als JSON
   (`activeGames` für Deploy-Checks), Lasttest `npm run loadtest` (20×10×3, Heap stabil ~11 MB).
-- Nächstes: M7 Tech-Preview online
+- M7 Tech-Preview: Dateien fertig (`Dockerfile`, `deploy/`), wartet auf Push + Root-Skript durch den Nutzer.
+- Danach: M8 Design
 - Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
   `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
 
@@ -41,6 +42,10 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
   `deploy/` vorbereiten, der Nutzer führt es aus. Auf dem Server laufen viele andere Projekte, also
   bestehende nginx-Konfigurationen nur lesen und nie anfassen.
 - Remote: https://github.com/the-monte-christo/schwindelex (public)
+- Produktion: Docker-Container aus Git-Checkout `~/schwindelex` des Deploy-Benutzers, `127.0.0.1:3020`,
+  nginx-Vhost `schwindelex.blanke.nrw`. Runbook: [deploy/README.md](deploy/README.md).
+  SSH-Zugang, Benutzer und andere Projekte auf dem Server: nur in `CLAUDE.local.md`.
+- **Öffentliches Repo:** Hostname, SSH-Alias und Benutzername des Servers nie in getrackte Dateien.
 
 ## Befehle
 - `npm start`: Server (liest `.env`, Port aus `PORT`), `npm run dev:server` mit Watch

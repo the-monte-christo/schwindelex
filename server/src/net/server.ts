@@ -177,10 +177,12 @@ export function inviteUrl(publicUrl: string, code: string): string {
 }
 
 function clientIp(req: IncomingMessage, trustProxy: boolean): string {
+  // X-Real-IP is set by our nginx from $remote_addr. X-Forwarded-For is not used:
+  // its first entry comes from the client and could fake an IP to dodge rate limits.
   if (trustProxy) {
-    const forwarded = req.headers['x-forwarded-for'];
-    const first = (Array.isArray(forwarded) ? forwarded[0] : forwarded)?.split(',')[0]?.trim();
-    if (first) return first;
+    const real = req.headers['x-real-ip'];
+    const ip = (Array.isArray(real) ? real[0] : real)?.trim();
+    if (ip) return ip;
   }
   return req.socket.remoteAddress ?? 'unknown';
 }

@@ -1,0 +1,23 @@
+# Produktionsstapel auf dem vServer. Start über deploy/deploy.sh.
+# Die App hört nur auf 127.0.0.1 – nach außen geht ausschließlich nginx.
+services:
+  app:
+    build:
+      context: ..
+    image: schwindelex:latest
+    restart: unless-stopped
+    env_file: ../.env
+    environment:
+      # fest für den Container, unabhängig von der .env
+      PORT: '3000'
+      TRUST_PROXY: '1'
+      NODE_ENV: production
+    ports:
+      - '127.0.0.1:3020:3000'
+    # Sparsam bleiben: der Server hat 1,8 GB Arbeitsspeicher.
+    mem_limit: 256m
+    logging:
+      driver: json-file
+      options:
+        max-size: '5m'
+        max-file: '3'

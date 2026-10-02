@@ -5,7 +5,7 @@ export interface Config {
   hostPin: string;
   wordsFile: string;
   anthropicApiKey: string | null;
-  /** Behind nginx: take the client IP from X-Forwarded-For. */
+  /** Behind nginx: take the client IP from X-Real-IP (set by nginx). */
   trustProxy: boolean;
 }
 

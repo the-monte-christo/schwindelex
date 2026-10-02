@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { WebSocket as WsClient } from 'ws';
 import type { Judge } from '../ai/judge.ts';
 import { exactJudge } from '../ai/judge.ts';
 import type { Word } from '../game/types.ts';
@@ -35,6 +36,37 @@ describe('load', () => {
       await server.close();
     }
   }, 30_000);
+
+  it('behind the proxy counts X-Real-IP and ignores a forged X-Forwarded-For', async () => {
+    const server = await startServer({
+      port: 0,
+      publicUrl: 'http://localhost',
+      hostPin: 'pin',
+      words,
+      judge: exactJudge,
+      trustProxy: true,
+      maxConnectionsPerIp: 1,
+      log: () => {},
+    });
+    const open = (headers: Record<string, string>): Promise<WsClient | null> =>
+      new Promise((resolve) => {
+        const ws = new WsClient(`ws://127.0.0.1:${server.port}/ws`, { headers });
+        ws.on('open', () => resolve(ws));
+        ws.on('error', () => resolve(null));
+      });
+    try {
+      const a = await open({ 'x-real-ip': '10.0.0.1', 'x-forwarded-for': '1.1.1.1' });
+      const b = await open({ 'x-real-ip': '10.0.0.2', 'x-forwarded-for': '1.1.1.1' });
+      const c = await open({ 'x-real-ip': '10.0.0.1', 'x-forwarded-for': '2.2.2.2' });
+      expect(a).not.toBeNull();
+      expect(b).not.toBeNull(); // same forged XFF, different real IP → allowed
+      expect(c).toBeNull(); // forged XFF does not help, real IP is at its limit
+      a?.close();
+      b?.close();
+    } finally {
+      await server.close();
+    }
+  });
 
   it('refuses WebSockets beyond the per-IP limit', async () => {
     const server = await startServer({
