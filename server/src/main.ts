@@ -1,4 +1,5 @@
 import { existsSync } from 'node:fs';
+import { createHaikuJudge } from './ai/haiku.ts';
 import { exactJudge } from './ai/judge.ts';
 import { loadConfig } from './config.ts';
 import { startServer } from './net/server.ts';
@@ -9,12 +10,17 @@ if (existsSync('.env')) process.loadEnvFile('.env');
 const config = loadConfig();
 const words = loadWords(config.wordsFile);
 
+const judge = config.anthropicApiKey
+  ? createHaikuJudge({ apiKey: config.anthropicApiKey, log: (msg) => console.log(msg) })
+  : exactJudge;
+if (!config.anthropicApiKey) console.warn('ANTHROPIC_API_KEY fehlt – nur exakter Textvergleich, keine KI');
+
 const server = await startServer({
   port: config.port,
   publicUrl: config.publicUrl,
   hostPin: config.hostPin,
   words,
-  judge: exactJudge,
+  judge,
   staticDir: 'client/dist',
   trustProxy: config.trustProxy,
 });

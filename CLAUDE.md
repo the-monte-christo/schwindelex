@@ -11,7 +11,12 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 - M1 Spiellogik: ✅ `server/src/game/` (Game-Klasse + rules)
 - M2 Server + Echtzeit: ✅ `server/src/net/` (LobbyManager, WebSocket, QR, Host-PIN, Reconnect, Rate-Limits),
   Protokoll in `shared/protocol.ts`, Integrationstests mit echten WebSocket-Clients (`testClient.ts`)
-- Nächstes: M3 Haiku (`server/src/ai/`; Schnittstelle `Judge` existiert, aktuell `exactJudge`)
+- M3 Haiku: ✅ `server/src/ai/haiku.ts` (`claude-haiku-4-5`, Structured Output: pro Antwort
+  `correct` + `same_as`, Stapel per Union-Find). Ohne API-Key → `exactJudge`. Bei Fehler/Timeout → Fallback.
+  Eval: `npm run eval:judge` (30 Fälle, nur Testwörter, ~3 Cent). Stand: 29/30, Richtig/Falsch 30/30;
+  bekannter Grenzfall: zwei Tänze verschiedener Herkunft werden zusammengelegt.
+  Prompt-Beispiele nie aus den Eval-Fällen nehmen (Überanpassung).
+- Nächstes: M4 funktionaler Client (ungestylt) + Playwright mit System-Edge
 - Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
   `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
 
@@ -36,6 +41,7 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 - `npm start`: Server (liest `.env`, Port aus `PORT`), `npm run dev:server` mit Watch
 - `npm test`: Vitest (Unit und Integration)
 - `npm run typecheck`: `tsc --noEmit`
+- `npm run eval:judge`: Haiku-Evals gegen die echte API (kostet Geld, nur bei Prompt-Änderungen)
 
 ## Architektur (Kurzfassung)
 - `Game` (rein) ← `LobbyManager` (Sessions, Timer, Effekte, Broadcast) ← `startServer` (HTTP, `ws`, Heartbeat)
