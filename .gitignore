@@ -2,6 +2,8 @@
 CLAUDE.local.md
 # Ursprüngliche Spec enthält private Serverdaten
 project.md
+# Server-Setup (Deploy-Skripte, nginx, Compose) liegt nur lokal und auf dem Server
+deploy/
 .env
 .env.*
 !.env.example
