@@ -1,0 +1,21 @@
+{
+  "name": "schwindelex",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser-Multiplayer-Ratespiel im Stil von Nobody's Perfect",
+  "license": "Unlicense",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

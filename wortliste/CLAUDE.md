@@ -108,6 +108,9 @@ Pro Wort eine **Kurzdefinition** schreiben:
   Abkürzungen wie „jmd.“/„etw.“). Sonst erkennt man die echte Antwort sofort am Stil.
 - enthält weder das Wort selbst noch seinen auffälligen Wortstamm
 - kein Punkt am Ende nötig; Groß-/Kleinschreibung normal
+**Ausschluss:** Kein Wort aus `../data/words.test.json` aufnehmen (das sind gespoilerte Testwörter;
+lesen ist erlaubt, ändern nicht).
+
 Beispiel für den Stil (Testwort, nicht in die Liste aufnehmen): *Kladderadatsch* →
 „ein großes Durcheinander oder ein peinlicher Zusammenbruch“ statt
 „(umgangssprachlich) Durcheinander; Skandal; Zusammenbruch“.

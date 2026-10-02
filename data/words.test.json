@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "Testwörter für Entwicklung und Tests (bekannte Wörter, dürfen gespoilert werden)",
+  "words": [
+    { "id": "t01", "word": "Kladderadatsch", "pos": "noun", "definition": "ein großes Durcheinander oder ein peinlicher Zusammenbruch", "tags": [], "domain": "Alltag" },
+    { "id": "t02", "word": "Fisimatenten", "pos": "noun", "definition": "unnötige Umstände, Ausflüchte oder Faxen", "tags": [], "domain": "Alltag" },
+    { "id": "t03", "word": "Tohuwabohu", "pos": "noun", "definition": "ein totales Chaos, wildes Durcheinander", "tags": [], "domain": "Alltag" },
+    { "id": "t04", "word": "Firlefanz", "pos": "noun", "definition": "unnützes Zeug oder albernes Getue", "tags": [], "domain": "Alltag" },
+    { "id": "t05", "word": "Brimborium", "pos": "noun", "definition": "übertriebener Aufwand um eine eigentlich unwichtige Sache", "tags": [], "domain": "Alltag" },
+    { "id": "t06", "word": "Kokolores", "pos": "noun", "definition": "Unsinn, dummes Gerede", "tags": [], "domain": "Alltag" },
+    { "id": "t07", "word": "Schabernack", "pos": "noun", "definition": "ein übermütiger Streich, mit dem man jemanden neckt", "tags": [], "domain": "Alltag" },
+    { "id": "t08", "word": "Mumpitz", "pos": "noun", "definition": "Quatsch, Blödsinn", "tags": [], "domain": "Alltag" },
+    { "id": "t09", "word": "trödeln", "pos": "verb", "definition": "langsam sein und dabei Zeit verschwenden", "tags": [], "domain": "Alltag" },
+    { "id": "t10", "word": "schwadronieren", "pos": "verb", "definition": "wortreich und angeberisch daherreden", "tags": [], "domain": "Alltag" },
+    { "id": "t11", "word": "kommod", "pos": "adj", "definition": "bequem, angenehm", "tags": ["regional"], "domain": "Alltag" },
+    { "id": "t12", "word": "blümerant", "pos": "adj", "definition": "flau, ein bisschen schwindelig im Magen", "tags": [], "domain": "Alltag" }
+  ]
+}

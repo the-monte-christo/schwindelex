@@ -7,8 +7,11 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 > Der Rest dieser Datei betrifft dich nicht.
 
 ## Stand
-- M0 Setup: in Arbeit
-- Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin
+- M0 Setup: ✅
+- M1 Spiellogik: ✅ `server/src/game/` (Game-Klasse + rules, 43 Tests)
+- Nächstes: M2 Server + Echtzeit
+- Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
+  `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
 
 ## Regeln für die Zusammenarbeit
 - **Spoilerschutz:** Der Nutzer spielt selbst mit. Niemals echte Spielwörter mit Definitionen zeigen
