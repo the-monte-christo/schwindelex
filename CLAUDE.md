@@ -16,7 +16,9 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
   Eval: `npm run eval:judge` (30 Fälle, nur Testwörter, ~3 Cent). Stand: 29/30, Richtig/Falsch 30/30;
   bekannter Grenzfall: zwei Tänze verschiedener Herkunft werden zusammengelegt.
   Prompt-Beispiele nie aus den Eval-Fällen nehmen (Überanpassung).
-- Nächstes: M4 funktionaler Client (ungestylt) + Playwright mit System-Edge
+- M4 Client: ✅ technisch (`client/`, Preact 11 + Vite, ~10 KB JS gz), E2E grün (`e2e/`, System-Edge).
+  Offen: Testrunde im WLAN mit echten Handys (macht der Nutzer).
+- Nächstes: M6 Härtung (M5 Wortliste läuft parallel beim Sonnet-Agenten)
 - Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
   `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
 
@@ -42,6 +44,10 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 - `npm test`: Vitest (Unit und Integration)
 - `npm run typecheck`: `tsc --noEmit`
 - `npm run eval:judge`: Haiku-Evals gegen die echte API (kostet Geld, nur bei Prompt-Änderungen)
+- `npm run build`: Client nach `client/dist` (der Node-Server liefert ihn aus)
+- `npm run dev:client`: Vite-Devserver mit Proxy auf den Node-Server (Port 3000)
+- `npm run test:e2e`: Playwright gegen System-Edge (`channel: 'msedge'`, **keine** Browser-Downloads).
+  Startet eigenen Server auf Port 3100 mit `SKIP_ENV_FILE=1` (kein API-Key, keine Kosten).
 
 ## Architektur (Kurzfassung)
 - `Game` (rein) ← `LobbyManager` (Sessions, Timer, Effekte, Broadcast) ← `startServer` (HTTP, `ws`, Heartbeat)
@@ -58,3 +64,6 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 - Spiellogik in `server/src/game/` ist rein (kein I/O, keine echten Timer, kein `Math.random` direkt).
   Uhr und Zufall werden injiziert.
 - Code und Bezeichner auf Englisch, UI-Texte auf Deutsch.
+- Client: Preact 11. Werden Elemente gleichen Typs bedingt ausgetauscht (z. B. zwei Formulare),
+  `key` setzen – sonst verwendet Preact Inputs wieder und Handler/State geraten durcheinander.
+- E2E-Selektoren über Rollen/Labels (`getByRole`, `getByLabel`), damit sie das Redesign in M8 überleben.

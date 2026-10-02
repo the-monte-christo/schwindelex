@@ -11,20 +11,27 @@
   "scripts": {
     "start": "node server/src/main.ts",
     "dev:server": "node --watch server/src/main.ts",
+    "dev:client": "vite --config client/vite.config.ts",
+    "build": "vite build --config client/vite.config.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p client",
     "eval:judge": "node server/src/ai/eval/runJudgeEval.ts"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@preact/preset-vite": "^2.10.6",
     "@types/node": "^24.19.1",
     "@types/qrcode": "^1.5.6",
     "@types/ws": "^8.18.2",
     "typescript": "^7.0.2",
+    "vite": "^8.3.2",
     "vitest": "^5.0.3"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",
+    "preact": "^11.0.0",
     "qrcode": "^1.5.4",
     "ws": "^8.22.0"
   }

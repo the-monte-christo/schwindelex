@@ -5,7 +5,8 @@ import { loadConfig } from './config.ts';
 import { startServer } from './net/server.ts';
 import { loadWords } from './words.ts';
 
-if (existsSync('.env')) process.loadEnvFile('.env');
+// E2E tests set SKIP_ENV_FILE so the real API key and PIN never leak into test runs.
+if (process.env.SKIP_ENV_FILE !== '1' && existsSync('.env')) process.loadEnvFile('.env');
 
 const config = loadConfig();
 const words = loadWords(config.wordsFile);

@@ -1,0 +1,95 @@
+/* Bewusst schlicht: nur Bedienbarkeit auf dem Handy. Das echte Design kommt in M8. */
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+  line-height: 1.4;
+}
+body {
+  margin: 0;
+  padding: 0 16px 32px;
+}
+main {
+  max-width: 480px;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  margin: 12px 0;
+}
+input,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 16px; /* verhindert Auto-Zoom auf iOS */
+  padding: 8px;
+}
+button {
+  font: inherit;
+  min-height: 44px;
+  padding: 8px 16px;
+  margin: 4px 4px 4px 0;
+}
+button[aria-pressed='true'] {
+  font-weight: bold;
+  outline: 3px solid currentColor;
+}
+button.link {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  padding: 0;
+  min-height: 0;
+}
+.stacks {
+  list-style: none;
+  padding: 0;
+}
+.stack {
+  width: 100%;
+  text-align: left;
+}
+.revealed li {
+  border: 1px solid;
+  padding: 4px 8px;
+  margin: 8px 0;
+}
+.revealed li[data-true='true'] {
+  border-width: 3px;
+}
+.meta,
+.hint,
+.counter,
+.pos,
+.round {
+  font-size: 0.85em;
+  opacity: 0.75;
+  margin: 0;
+}
+.status,
+.error {
+  position: sticky;
+  top: 0;
+  margin: 0 -16px;
+  padding: 8px 16px;
+  background: #fd4;
+  color: #000;
+}
+.error {
+  background: #f88;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  overflow: auto;
+  padding: 16px;
+  background: Canvas;
+}
+.invite img {
+  background: #fff;
+}
+.code {
+  font-size: 1.5em;
+  letter-spacing: 0.15em;
+}
