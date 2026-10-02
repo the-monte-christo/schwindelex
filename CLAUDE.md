@@ -23,8 +23,8 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
   (`activeGames` für Deploy-Checks), Lasttest `npm run loadtest` (20×10×3, Heap stabil ~11 MB).
 - M7 Tech-Preview: ✅ online unter https://schwindelex.blanke.nrw (2026-10-02). Smoke-Test über wss mit
   Haiku ok (~1 s pro Runde). Updates: `~/schwindelex-setup/deploy.sh` auf dem Server (nach Absprache).
-- M8 Design: ✅ lokal (`client/src/style.css`: Tokens hell=Papier/Tinte, dunkel=Tafel/Kreide, Post-its,
-  Stapel, Stempel, Kritzeleien, Animationen mit reduced-motion). Noch nicht auf dem Server.
+- M8 Design: ✅ online seit 2026-10-02 (`client/src/style.css`: Tokens hell=Papier/Tinte,
+  dunkel=Tafel/Kreide, Post-its, Stapel, Stempel, Kritzeleien, Animationen mit reduced-motion).
   - Bild-Assets: Rohbilder in `design/roh/` (gitignored, Prompts in `design/bild-prompts.md`).
     `python design/zerschneiden.py` → Icon-Sprite `client/src/assets/icons.webp` + `icons.gen.ts/.css`
     + Favicons in `client/public/`. `python design/texturen.py` → nahtlose Kacheln `paper.webp`/`board.webp`
@@ -33,8 +33,10 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
     `var(--icon-sprite)`/`var(--icon-sprite-size)` (z. B. `h2.scribbled::after`).
   - Screenshots zur Sichtprüfung: `npx playwright test e2e/screens.spec.ts` → `test-results/screens/`
     (mobil hell/dunkel, desktop). Der Test prüft auch auf horizontalen Overflow.
-- Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
-  `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
+- M9 Release: ✅ Betriebshandbuch [BETRIEB.md](BETRIEB.md) (Betrieb, Updates, Rollback, Fehlersuche,
+  Limits, Kosten, Datenschutz, Inhalte ändern), [README.md](README.md). Bei Änderungen an Limits,
+  Log-Texten oder Abläufen BETRIEB.md mitpflegen.
+- Wortliste: fertig, Pipeline in `wortliste/`. Bei Neuauflage Dateien dort committen, **ohne Inhalte anzusehen**.
 
 ## Regeln für die Zusammenarbeit
 - **Spoilerschutz:** Der Nutzer spielt selbst mit. Niemals echte Spielwörter mit Definitionen zeigen
