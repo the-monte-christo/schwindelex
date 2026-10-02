@@ -21,7 +21,8 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 - M5 Wortliste: ✅ `data/words.json` (264 Wörter, vom Nutzer gestrichen). **Nie ansehen/ausgeben** (Spoiler).
 - M6 Härtung: ✅ Verbindungslimits (60/IP, 2000 gesamt), Security-Header/CSP, `/healthz` als JSON
   (`activeGames` für Deploy-Checks), Lasttest `npm run loadtest` (20×10×3, Heap stabil ~11 MB).
-- M7 Tech-Preview: in Arbeit (Server-Setup in `~/schwindelex-setup`, Root-Skript durch den Nutzer).
+- M7 Tech-Preview: ✅ online unter https://schwindelex.blanke.nrw (2026-10-02). Smoke-Test über wss mit
+  Haiku ok (~1 s pro Runde). Updates: `~/schwindelex-setup/deploy.sh` auf dem Server (nach Absprache).
 - Danach: M8 Design
 - Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
   `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
