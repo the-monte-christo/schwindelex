@@ -1,3 +1,4 @@
+import { Logo } from './logo.tsx';
 import { useState } from 'preact/hooks';
 import { connection } from './connection.ts';
 
@@ -39,7 +40,7 @@ export function Home({ notice }: { notice: string | null }) {
 
   return (
     <main>
-      <h1>Schwindelex</h1>
+      <Logo tagline />
       {notice && <p class="notice">{notice}</p>}
 
       <label>
@@ -60,7 +61,7 @@ export function Home({ notice }: { notice: string | null }) {
               onInput={(e) => setCode(e.currentTarget.value.toUpperCase())}
             />
           </label>
-          <button type="submit" disabled={!name.trim() || code.trim().length !== 4}>
+          <button type="submit" class="primary" disabled={!name.trim() || code.trim().length !== 4}>
             Beitreten
           </button>
           {!invited && (
@@ -78,7 +79,7 @@ export function Home({ notice }: { notice: string | null }) {
             Host-PIN
             <input type="password" value={pin} autoComplete="off" onInput={(e) => setPin(e.currentTarget.value)} />
           </label>
-          <button type="submit" disabled={!name.trim() || !pin}>
+          <button type="submit" class="primary" disabled={!name.trim() || !pin}>
             Spiel erstellen
           </button>
           <p>

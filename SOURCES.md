@@ -14,5 +14,8 @@ fremden Daten abgeleitet und steht unter **CC BY-SA 4.0**:
 Leipzig-Referenz: D. Goldhahn, T. Eckart, U. Quasthoff: *Building Large Monolingual Dictionaries at the
 Leipzig Corpora Collection: From 100 to 200 Languages.* LREC 2012.
 
+Schrift: [Patrick Hand](https://fonts.google.com/specimen/Patrick+Hand) von Patrick Wagesreiter,
+[SIL Open Font License 1.1](https://openfontlicense.org), eingebunden über `@fontsource/patrick-hand`.
+
 Laufzeit-KI: Das Gruppieren ähnlicher Antworten und das Prüfen auf richtige Antworten übernimmt
 Claude Haiku (Anthropic) über die API.

@@ -23,7 +23,11 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
   (`activeGames` für Deploy-Checks), Lasttest `npm run loadtest` (20×10×3, Heap stabil ~11 MB).
 - M7 Tech-Preview: ✅ online unter https://schwindelex.blanke.nrw (2026-10-02). Smoke-Test über wss mit
   Haiku ok (~1 s pro Runde). Updates: `~/schwindelex-setup/deploy.sh` auf dem Server (nach Absprache).
-- Danach: M8 Design
+- M8 Design: in Arbeit. CSS-Gerüst fertig (`client/src/style.css`: Tokens hell=Papier/Tinte,
+  dunkel=Tafel/Kreide, Post-its, Stapel, Stempel, Animationen mit reduced-motion). Offen: Bild-Assets vom
+  Nutzer (Prompts in `design/bild-prompts.md`), dann zerschneiden und einbauen.
+  Screenshots zur Sichtprüfung: `npx playwright test e2e/screens.spec.ts` → `test-results/screens/`
+  (mobil hell/dunkel, desktop). Der Test prüft auch auf horizontalen Overflow.
 - Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
   `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
 

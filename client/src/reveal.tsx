@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks';
 import type { PlayerView } from '../../shared/protocol.ts';
 import { connection } from './connection.ts';
-import { InviteOverlay, nameOf, PlayerList } from './parts.tsx';
+import { InviteOverlay, nameOf, noteColor, PlayerList, tilt } from './parts.tsx';
 
 function names(view: PlayerView, ids: string[]): string {
   return ids.map((id) => nameOf(view, id)).join(', ');
@@ -19,8 +19,10 @@ function Scoreboard({ view }: { view: PlayerView }) {
     <ol class="scores" aria-label="Punktestand">
       {ranking(view).map((p) => (
         <li key={p.id}>
-          {p.place}. {p.name}: {p.score}
-          {scores[p.id] && scores[p.id]!.total > 0 && <span class="gain"> (+{scores[p.id]!.total})</span>}
+          <span>
+            {p.place}. {p.name}: {p.score}
+          </span>
+          {scores[p.id] && scores[p.id]!.total > 0 && <span class="gain">+{scores[p.id]!.total}</span>}
         </li>
       ))}
     </ol>
@@ -45,18 +47,27 @@ export function Reveal({ view }: { view: PlayerView }) {
             Richtig: <strong>{reveal.definition}</strong>
           </p>
           <ul class="stacks revealed">
-            {reveal.stacks.map((s) => (
-              <li key={s.id} data-true={s.isTrue}>
-                <p>
-                  {s.isTrue ? '✓ ' : ''}
-                  {s.text}
-                </p>
-                <p class="meta">
-                  {s.authors.length > 0 ? `von ${names(view, s.authors)}` : 'Original'}
-                  {s.voters.length > 0 && ` · getippt von ${names(view, s.voters)}`}
-                </p>
-              </li>
-            ))}
+            {reveal.stacks.map((s) => {
+              const seed = `${round.number}:${s.id}`;
+              return (
+                <li key={s.id}>
+                  <div
+                    class="note"
+                    data-true={s.isTrue}
+                    data-color={noteColor(seed)}
+                    data-size={Math.min(Math.max(1, s.authors.length), 3)}
+                    style={tilt(seed)}
+                  >
+                    {s.isTrue && <span class="stamp">stimmt!</span>}
+                    {s.text}
+                    <span class="meta">
+                      {s.authors.length > 0 ? `von ${names(view, s.authors)}` : 'Original'}
+                      {s.voters.length > 0 && ` · getippt von ${names(view, s.voters)}`}
+                    </span>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </>
       )}
@@ -68,7 +79,7 @@ export function Reveal({ view }: { view: PlayerView }) {
         <p class="notice">Du bist ab der nächsten Runde dabei.</p>
       ) : (
         <div class="buttons">
-          <button aria-pressed={round.myDecision === 'continue'} onClick={() => connection.send({ t: 'decide', decision: 'continue' })}>
+          <button class="primary" aria-pressed={round.myDecision === 'continue'} onClick={() => connection.send({ t: 'decide', decision: 'continue' })}>
             Weiter
           </button>
           <button aria-pressed={round.myDecision === 'pass'} onClick={() => connection.send({ t: 'decide', decision: 'pass' })}>
@@ -89,12 +100,12 @@ export function Finished({ view }: { view: PlayerView }) {
   const rows = ranking(view);
   return (
     <main>
-      <h1>Siegerehrung</h1>
+      <h1 class="logo podium-title">Siegerehrung</h1>
       <ol class="podium" aria-label="Endstand">
-        {rows.map((p) => (
-          <li key={p.id} data-place={p.place}>
+        {rows.map((p, i) => (
+          <li key={p.id} data-place={p.place} style={{ ...tilt(p.id, 1.5), animationDelay: `${0.15 * (rows.length - i)}s` }}>
             {p.place === 1 ? '🏆 ' : `${p.place}. `}
-            {p.name}: {p.score} Punkte
+            {p.name}: {p.score} {p.score === 1 ? 'Punkt' : 'Punkte'}
           </li>
         ))}
       </ol>

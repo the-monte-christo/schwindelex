@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { PlayerView, RoundView } from '../../shared/protocol.ts';
 import { connection } from './connection.ts';
-import { Countdown, PlayerList } from './parts.tsx';
+import { Countdown, noteColor, PlayerList, tilt } from './parts.tsx';
 import { POS_TEXT } from './texts.ts';
 
 const MAX_LENGTH = 100;
@@ -61,20 +61,29 @@ export function Writing({ view, offset }: { view: PlayerView; offset: number }) 
       <WordHeader round={round} />
       <Countdown deadline={round.deadline} offset={offset} />
       <form onSubmit={submit}>
-        <label>
-          Was bedeutet das Wort?
-          <textarea
-            value={text}
-            maxLength={MAX_LENGTH}
-            rows={3}
-            onInput={(e) => onInput(e.currentTarget.value)}
-          />
-        </label>
+        <div class="lined">
+          <label>
+            Was bedeutet das Wort?
+            <textarea
+              value={text}
+              maxLength={MAX_LENGTH}
+              rows={3}
+              enterkeyhint="done"
+              onInput={(e) => onInput(e.currentTarget.value)}
+              onKeyDown={(e) => {
+                // Enter submits on phones; the answer is a single line anyway
+                if (e.key === 'Enter' && !e.shiftKey) submit(e);
+              }}
+            />
+          </label>
+        </div>
         <p class="counter">
           {text.length}/{MAX_LENGTH}
         </p>
         <div class="buttons">
-          <button type="submit">{answer?.submitted ? 'Abgegeben ✓' : 'OK'}</button>
+          <button type="submit" class="primary">
+            {answer?.submitted ? 'Abgegeben ✓' : 'OK'}
+          </button>
           <button type="button" onClick={clear}>
             Löschen
           </button>
@@ -105,19 +114,25 @@ export function Voting({ view, offset }: { view: PlayerView; offset: number }) {
       <Countdown deadline={round.deadline} offset={offset} />
       <h2>Welche Erklärung stimmt?</h2>
       <ul class="stacks">
-        {round.stacks!.map((s) => (
-          <li key={s.id}>
-            <button
-              class="stack"
-              aria-pressed={round.myVote === s.id}
-              onClick={() => connection.send({ t: 'vote', stack: s.id })}
-            >
-              {s.text}
-              {s.size > 1 && <span class="size"> ({s.size} Zettel)</span>}
-              {round.myStack === s.id && <span class="mine"> – dein Zettel</span>}
-            </button>
-          </li>
-        ))}
+        {round.stacks!.map((s) => {
+          const seed = `${round.number}:${s.id}`;
+          return (
+            <li key={s.id}>
+              <button
+                class="note"
+                data-color={noteColor(seed)}
+                data-size={Math.min(s.size, 3)}
+                style={tilt(seed)}
+                aria-pressed={round.myVote === s.id}
+                onClick={() => connection.send({ t: 'vote', stack: s.id })}
+              >
+                {s.text}
+                {s.size > 1 && <span class="size"> ({s.size} Zettel)</span>}
+                {round.myStack === s.id && <span class="mine"> dein Zettel</span>}
+              </button>
+            </li>
+          );
+        })}
       </ul>
       <PlayerList view={view} doneLabel="getippt" />
     </main>

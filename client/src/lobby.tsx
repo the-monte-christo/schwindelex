@@ -1,3 +1,4 @@
+import { Logo } from './logo.tsx';
 import type { PlayerView } from '../../shared/protocol.ts';
 import { connection } from './connection.ts';
 import { Invite, PlayerList } from './parts.tsx';
@@ -10,20 +11,22 @@ export function Lobby({ view }: { view: PlayerView }) {
 
   return (
     <main>
-      <h1>Schwindelex</h1>
+      <Logo />
       <Invite code={view.code} />
 
       <h2>Mitspieler ({view.players.length})</h2>
       <PlayerList view={view} doneLabel="bereit" />
 
-      <button aria-pressed={me?.ready ?? false} onClick={() => connection.send({ t: 'ready', ready: !me?.ready })}>
-        {me?.ready ? 'Bereit ✓' : 'Bereit?'}
-      </button>
-      {isHost && (
-        <button onClick={() => connection.send({ t: 'start' })} disabled={!canStart}>
-          Spiel starten
+      <div class="buttons">
+        <button aria-pressed={me?.ready ?? false} onClick={() => connection.send({ t: 'ready', ready: !me?.ready })}>
+          {me?.ready ? 'Bereit ✓' : 'Bereit?'}
         </button>
-      )}
+        {isHost && (
+          <button class="primary" onClick={() => connection.send({ t: 'start' })} disabled={!canStart}>
+            Spiel starten
+          </button>
+        )}
+      </div>
       {isHost && !canStart && (
         <p class="hint">{view.players.length < 2 ? 'Warte auf Mitspieler…' : 'Warte, bis alle bereit sind…'}</p>
       )}

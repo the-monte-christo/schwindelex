@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",
+    "@fontsource/patrick-hand": "^5.3.0",
     "preact": "^11.0.0",
     "qrcode": "^1.5.4",
     "ws": "^8.22.0"
