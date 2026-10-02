@@ -1,0 +1,25 @@
+# Secrets / private Notizen
+CLAUDE.local.md
+.env
+.env.*
+!.env.example
+
+# Dependencies / Builds
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Tests
+test-results/
+playwright-report/
+
+# Wortliste: Rohdaten und Zwischenstände (groß / reproduzierbar)
+wortliste/raw/
+wortliste/arbeit/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
