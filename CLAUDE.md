@@ -8,8 +8,10 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 
 ## Stand
 - M0 Setup: ✅
-- M1 Spiellogik: ✅ `server/src/game/` (Game-Klasse + rules, 43 Tests)
-- Nächstes: M2 Server + Echtzeit
+- M1 Spiellogik: ✅ `server/src/game/` (Game-Klasse + rules)
+- M2 Server + Echtzeit: ✅ `server/src/net/` (LobbyManager, WebSocket, QR, Host-PIN, Reconnect, Rate-Limits),
+  Protokoll in `shared/protocol.ts`, Integrationstests mit echten WebSocket-Clients (`testClient.ts`)
+- Nächstes: M3 Haiku (`server/src/ai/`; Schnittstelle `Judge` existiert, aktuell `exactJudge`)
 - Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
   `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
 
@@ -31,8 +33,18 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 - Remote: https://github.com/the-monte-christo/schwindelex (public)
 
 ## Befehle
+- `npm start`: Server (liest `.env`, Port aus `PORT`), `npm run dev:server` mit Watch
 - `npm test`: Vitest (Unit und Integration)
 - `npm run typecheck`: `tsc --noEmit`
+
+## Architektur (Kurzfassung)
+- `Game` (rein) ← `LobbyManager` (Sessions, Timer, Effekte, Broadcast) ← `startServer` (HTTP, `ws`, Heartbeat)
+- Nach jeder Aktion: `afterChange()` → Effekte ausführen (Judge async, Spielende), Timer neu setzen,
+  jedem Spieler seinen `viewFor()`-Snapshot senden (nur bei Änderung).
+- Geheimnisse bleiben serverseitig: Schreiben → keine fremden Antworten, Tippen → keine Autoren/`isTrue`.
+  Tests in `server.test.ts` prüfen das. Bei neuen View-Feldern dort mittesten.
+- Rate-Limits: Lobby erstellen 10/10 min pro IP, fehlgeschlagene Beitritte 20/min pro IP
+  (erfolgreiche zählen nicht, eine Party teilt sich eine IP), 20 Nachrichten/s pro Verbindung.
 
 ## Konventionen
 - TypeScript im Server läuft per nativem Type-Stripping von Node: nur „erasable syntax“

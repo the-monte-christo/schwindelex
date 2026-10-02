@@ -1,5 +1,7 @@
 # Secrets / private Notizen
 CLAUDE.local.md
+# Ursprüngliche Spec enthält private Serverdaten
+project.md
 .env
 .env.*
 !.env.example

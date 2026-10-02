@@ -1,3 +1,7 @@
+import type { Decision, Phase, ScoreLine } from '../../../shared/protocol.ts';
+
+export type { Decision, Phase, ScoreLine };
+
 export type PlayerId = string;
 
 export interface Word {
@@ -8,10 +12,6 @@ export interface Word {
   tags?: string[];
   domain?: string;
 }
-
-export type Phase = 'lobby' | 'writing' | 'judging' | 'voting' | 'reveal' | 'finished';
-
-export type Decision = 'continue' | 'pass';
 
 export interface Player {
   id: PlayerId;
@@ -47,13 +47,6 @@ export interface Judgement {
   correct: PlayerId[];
   /** Groups of very similar wrong answers, representative first. */
   groups: PlayerId[][];
-}
-
-export interface ScoreLine {
-  correctAnswer: number;
-  correctVote: number;
-  bluff: number;
-  total: number;
 }
 
 export interface Round {
