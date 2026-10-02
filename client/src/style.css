@@ -598,23 +598,42 @@ button.note[aria-pressed='true'] {
 }
 
 /* Stempel auf dem richtigen Zettel */
+/* Stempel auf dem richtigen Zettel: wartet, bis alle Zettel liegen (0,8 s), schwebt heran,
+   knallt um ~1,13 s auf (Zettel ruckt, Tintenring), federt nach und bleibt schräg liegen. */
 .stamp {
   position: absolute;
-  top: -14px;
+  top: -16px;
   right: 12px;
-  padding: 2px 8px;
+  padding: 1px 12px 2px;
   font-family: var(--hand);
-  font-size: 1.1rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
   color: var(--green);
-  border: 2.5px solid var(--green);
-  border-radius: 6px;
+  border: 3px solid currentColor;
+  border-radius: 8px;
+  /* Doppellinie wie bei einem Gummistempel */
+  box-shadow: inset 0 0 0 2px var(--note, transparent), inset 0 0 0 3.5px currentColor;
   transform: rotate(12deg);
-  animation: stamp 0.35s cubic-bezier(0.3, 1.6, 0.6, 1) both 0.3s;
+  animation: stamp-in 0.6s cubic-bezier(0.2, 0.8, 0.3, 1) both 0.8s;
+  pointer-events: none;
+}
+
+.stamp::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 2px solid currentColor;
+  border-radius: 12px;
+  opacity: 0;
+  animation: ink-ring 0.45s ease-out both 1.13s;
+}
+
+.revealed .note[data-true='true'] {
+  animation: jolt 0.3s ease-out 1.13s;
 }
 
 .revealed .note[data-true='true'] .stamp {
   color: #1e6b2f;
-  border-color: #1e6b2f;
   background: var(--note);
 }
 
@@ -852,10 +871,49 @@ h2.scribbled::after {
   }
 }
 
-@keyframes stamp {
-  from {
+@keyframes stamp-in {
+  0% {
     opacity: 0;
-    transform: rotate(12deg) scale(2.2);
+    transform: translate(22px, -40px) rotate(30deg) scale(2.4);
+    filter: drop-shadow(12px 20px 6px rgba(0, 0, 0, 0.25));
+  }
+  45% {
+    opacity: 0.9;
+    transform: translate(8px, -14px) rotate(20deg) scale(1.6);
+    filter: drop-shadow(6px 10px 4px rgba(0, 0, 0, 0.2));
+  }
+  55% {
+    opacity: 1;
+    transform: rotate(11deg) scale(0.86);
+    filter: none;
+  }
+  70% {
+    transform: rotate(12.5deg) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(12deg) scale(1);
+  }
+}
+
+@keyframes ink-ring {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+/* eigene translate-Eigenschaft, damit Neigung und Versatz (transform) des Zettels erhalten bleiben */
+@keyframes jolt {
+  30% {
+    translate: 0 4px;
+  }
+  65% {
+    translate: 0 -1px;
   }
 }
 

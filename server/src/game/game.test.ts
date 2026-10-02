@@ -113,7 +113,11 @@ describe('writing', () => {
     expect(judgeRequest(game).answers.map((a) => a.text)).toEqual(['eins', 'zwei', 'halb fertig']);
   });
 
-  it('takes the drafts when the 90 s run out', () => {
+  it('gives 180 s for writing', () => {
+    expect(game.round!.deadline - clock).toBe(180_000);
+  });
+
+  it('takes the drafts when the writing time runs out', () => {
     game.setDraft('a', 'entwurf');
     game.submit('b', 'fertig');
     advance(WRITING_SECONDS - 1, game);

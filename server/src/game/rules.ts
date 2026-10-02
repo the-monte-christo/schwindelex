@@ -4,7 +4,7 @@ export const MAX_PLAYERS = 20;
 export const MIN_PLAYERS = 2;
 export const MAX_ANSWER_LENGTH = 100;
 export const MAX_NAME_LENGTH = 20;
-export const WRITING_SECONDS = 90;
+export const WRITING_SECONDS = 180;
 /** Safety net if the AI never answers. */
 export const JUDGING_TIMEOUT_SECONDS = 20;
 

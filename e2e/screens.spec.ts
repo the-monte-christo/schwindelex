@@ -11,7 +11,7 @@ const VARIANTS: { name: string; options: BrowserContextOptions }[] = [
 ];
 
 async function shot(page: Page, variant: string, name: string) {
-  await page.waitForTimeout(1300); // let drop-in animations settle
+  await page.waitForTimeout(2000); // let drop-in and stamp animations settle
   await page.screenshot({ path: `test-results/screens/${variant}/${name}.png`, fullPage: true });
   const culprits = await page.evaluate(() => {
     const width = document.documentElement.clientWidth;

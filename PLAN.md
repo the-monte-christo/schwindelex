@@ -11,7 +11,7 @@ Stand: 2026-10-02. Grundlage: [project.md](project.md) + Entscheidungen aus der 
 - Verlässt der Host die Vor-Lobby, wird der nächste Spieler Host. Nach dem Start hat der Host keine Sonderrechte mehr.
 
 **Runde**
-1. **Schreiben** – Wort wird gezeigt. 90 s oder bis alle aktiven Spieler „OK“ gedrückt haben.
+1. **Schreiben** – Wort wird gezeigt. 180 s oder bis alle aktiven Spieler „OK“ gedrückt haben.
    „Löschen“ leert die Antwort. Bei Timeout zählt der aktuelle Entwurf. Max. 100 Zeichen.
    Leere Antwort ist erlaubt, man tippt trotzdem mit.
 2. **Gruppieren** – Haiku prüft, welche Antworten inhaltlich richtig sind, und gruppiert sehr ähnliche
