@@ -27,3 +27,6 @@ wortliste/arbeit/
 Thumbs.db
 .vscode/
 *.log
+
+# Rohbilder vom Bildgenerator (groß, werden zerschnitten)
+design/roh/
