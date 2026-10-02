@@ -1,0 +1,2376 @@
+{
+  "version": 1,
+  "source": "Wiktionary (CC BY-SA 4.0), Seltenheit: Leipzig Corpora Collection (CC BY 4.0)",
+  "words": [
+    {
+      "id": "w001",
+      "word": "abbuhlen",
+      "pos": "verb",
+      "definition": "sich durch übertriebenes Einschmeicheln etwas verschaffen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verhalten"
+    },
+    {
+      "id": "w002",
+      "word": "Abcdarier",
+      "pos": "noun",
+      "definition": "ein Schüler im ersten Schuljahr",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Schule"
+    },
+    {
+      "id": "w003",
+      "word": "Abderit",
+      "pos": "noun",
+      "definition": "ein einfältiger Mensch, ein Dummkopf",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gesellschaft"
+    },
+    {
+      "id": "w004",
+      "word": "Abgunst",
+      "pos": "noun",
+      "definition": "die Haltung, jemandem etwas nicht zu gönnen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w005",
+      "word": "abhold",
+      "pos": "adj",
+      "definition": "jemandem oder etwas abgeneigt",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w006",
+      "word": "abmeiern",
+      "pos": "verb",
+      "definition": "einem Bauern oder Pächter den Hof wegnehmen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Landwirtschaft"
+    },
+    {
+      "id": "w007",
+      "word": "Adebar",
+      "pos": "noun",
+      "definition": "der Storch in alten Märchen und Fabeln",
+      "tags": [],
+      "domain": "Tiere"
+    },
+    {
+      "id": "w008",
+      "word": "Adlatus",
+      "pos": "noun",
+      "definition": "ein junger, untergeordneter Helfer im Amt",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verwaltung"
+    },
+    {
+      "id": "w009",
+      "word": "affrös",
+      "pos": "adj",
+      "definition": "richtig hässlich",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Aussehen"
+    },
+    {
+      "id": "w010",
+      "word": "Aleuromantie",
+      "pos": "noun",
+      "definition": "Wahrsagen mit Mehl, zum Beispiel aus dem Knistern im Feuer",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Aberglaube"
+    },
+    {
+      "id": "w011",
+      "word": "Alezan",
+      "pos": "noun",
+      "definition": "ein sandfarbenes Pferd mit schwarzer Mähne und schwarzem Schweif",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Tiere"
+    },
+    {
+      "id": "w012",
+      "word": "Alfanz",
+      "pos": "noun",
+      "definition": "ein Gewinn, der durch Betrug zustande kam",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Handel"
+    },
+    {
+      "id": "w013",
+      "word": "Altan",
+      "pos": "noun",
+      "definition": "eine Plattform an einem oberen Stockwerk, die ins Freie führt",
+      "tags": [],
+      "domain": "Architektur"
+    },
+    {
+      "id": "w014",
+      "word": "Altin",
+      "pos": "noun",
+      "definition": "eine alte russische Kupfermünze im Wert von drei Kopeken",
+      "tags": [],
+      "domain": "Geld"
+    },
+    {
+      "id": "w015",
+      "word": "Amanuensis",
+      "pos": "noun",
+      "definition": "jemand, der für andere die Schreibarbeit macht",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verwaltung"
+    },
+    {
+      "id": "w016",
+      "word": "Ambo",
+      "pos": "noun",
+      "definition": "ein kanzelartiges Lesepult an der Chorschranke einer Kirche",
+      "tags": [],
+      "domain": "Kirche"
+    },
+    {
+      "id": "w017",
+      "word": "Ambra",
+      "pos": "noun",
+      "definition": "eine fettige Substanz aus dem Darm des Pottwals, die früher in Parfüms steckte",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w018",
+      "word": "antichambrieren",
+      "pos": "verb",
+      "definition": "im Vorzimmer warten, bis man vorgelassen wird",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verwaltung"
+    },
+    {
+      "id": "w019",
+      "word": "Aplomb",
+      "pos": "noun",
+      "definition": "selbstsicheres Auftreten und Nachdruck beim Reden",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Verhalten"
+    },
+    {
+      "id": "w020",
+      "word": "Armentarium",
+      "pos": "noun",
+      "definition": "die ganze Palette der Werkzeuge und Methoden eines Fachgebiets",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Wissenschaft"
+    },
+    {
+      "id": "w021",
+      "word": "Artothek",
+      "pos": "noun",
+      "definition": "eine Einrichtung, die Kunstwerke gegen Gebühr verleiht",
+      "tags": [],
+      "domain": "Kunst"
+    },
+    {
+      "id": "w022",
+      "word": "Asot",
+      "pos": "noun",
+      "definition": "jemand, der zügellos und ausschweifend lebt",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gesellschaft"
+    },
+    {
+      "id": "w023",
+      "word": "Ataman",
+      "pos": "noun",
+      "definition": "ein gewählter Anführer der Kosaken",
+      "tags": [],
+      "domain": "Geschichte"
+    },
+    {
+      "id": "w024",
+      "word": "Aubade",
+      "pos": "noun",
+      "definition": "ein morgendliches Ständchen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Musik"
+    },
+    {
+      "id": "w025",
+      "word": "auserkiesen",
+      "pos": "verb",
+      "definition": "jemanden aus mehreren auswählen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w026",
+      "word": "azurn",
+      "pos": "adj",
+      "definition": "leuchtend blau",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Aussehen"
+    },
+    {
+      "id": "w027",
+      "word": "Baffer",
+      "pos": "noun",
+      "definition": "Rohzucker, der noch gereinigt werden muss",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Küche"
+    },
+    {
+      "id": "w028",
+      "word": "Banse",
+      "pos": "noun",
+      "definition": "der Raum in der Scheune, in dem das Getreide gelagert wird",
+      "tags": [],
+      "domain": "Landwirtschaft"
+    },
+    {
+      "id": "w029",
+      "word": "Basse",
+      "pos": "noun",
+      "definition": "ein älterer, starker Keiler",
+      "tags": [],
+      "domain": "Jagd"
+    },
+    {
+      "id": "w030",
+      "word": "bedonnern",
+      "pos": "verb",
+      "definition": "jemanden mit Kanonen beschießen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Militär"
+    },
+    {
+      "id": "w031",
+      "word": "Beisel",
+      "pos": "noun",
+      "definition": "ein kleines, einfaches Gasthaus",
+      "tags": [],
+      "domain": "Gastronomie"
+    },
+    {
+      "id": "w032",
+      "word": "belgen",
+      "pos": "verb",
+      "definition": "jemanden wütend machen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w033",
+      "word": "bestochern",
+      "pos": "verb",
+      "definition": "mit einem spitzen Ding in etwas herumbohren",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w034",
+      "word": "bevettern",
+      "pos": "verb",
+      "definition": "sich jemandem überfreundlich nähern und so tun, als wäre man verwandt",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Familie"
+    },
+    {
+      "id": "w035",
+      "word": "Bibax",
+      "pos": "noun",
+      "definition": "ein Freund, mit dem man gern zusammen trinken geht",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gesellschaft"
+    },
+    {
+      "id": "w036",
+      "word": "Biblioklast",
+      "pos": "noun",
+      "definition": "jemand, der gern Bücher zerstört",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gesellschaft"
+    },
+    {
+      "id": "w037",
+      "word": "Bierschröter",
+      "pos": "noun",
+      "definition": "Arbeiter, der schwere Fässer auflädt und transportiert",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Handwerk"
+    },
+    {
+      "id": "w038",
+      "word": "Biese",
+      "pos": "noun",
+      "definition": "ein schmaler Streifen als Nahtverzierung an Kleidung",
+      "tags": [],
+      "domain": "Kleidung"
+    },
+    {
+      "id": "w039",
+      "word": "Blesse",
+      "pos": "noun",
+      "definition": "ein heller Fleck auf Stirn oder Nase eines Tieres",
+      "tags": [],
+      "domain": "Tiere"
+    },
+    {
+      "id": "w040",
+      "word": "Bober",
+      "pos": "noun",
+      "definition": "eine schwimmende Markierung im Wasser für Schiffe",
+      "tags": [],
+      "domain": "Seefahrt"
+    },
+    {
+      "id": "w041",
+      "word": "Bola",
+      "pos": "noun",
+      "definition": "ein Riemen mit Steinkugeln an den Enden, den man als Wurfwaffe nutzt",
+      "tags": [],
+      "domain": "Militär"
+    },
+    {
+      "id": "w042",
+      "word": "Bracke",
+      "pos": "noun",
+      "definition": "ein Jagdhund, der vor allem die Spur des Wildes aufnimmt",
+      "tags": [],
+      "domain": "Jagd"
+    },
+    {
+      "id": "w043",
+      "word": "Brandschwär",
+      "pos": "noun",
+      "definition": "ein großes Furunkel, besonders im Nacken",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Medizin"
+    },
+    {
+      "id": "w044",
+      "word": "Brunft",
+      "pos": "noun",
+      "definition": "die Paarungszeit des Schalenwilds",
+      "tags": [],
+      "domain": "Jagd"
+    },
+    {
+      "id": "w045",
+      "word": "Burse",
+      "pos": "noun",
+      "definition": "eine Geldbörse oder ein Geldbeutel",
+      "tags": [],
+      "domain": "Geld"
+    },
+    {
+      "id": "w046",
+      "word": "Buttenkrämer",
+      "pos": "noun",
+      "definition": "ein Händler, der mit seiner Ware herumzieht",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Handel"
+    },
+    {
+      "id": "w047",
+      "word": "Bülte",
+      "pos": "noun",
+      "definition": "ein kleiner bewachsener Erdhaufen in sehr feuchtem Gelände",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w048",
+      "word": "Campanile",
+      "pos": "noun",
+      "definition": "ein frei stehender Glockenturm",
+      "tags": [],
+      "domain": "Architektur"
+    },
+    {
+      "id": "w049",
+      "word": "Charpie",
+      "pos": "noun",
+      "definition": "Verbandsmaterial aus zerzupftem Leinen für Wunden",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Medizin"
+    },
+    {
+      "id": "w050",
+      "word": "Crespine",
+      "pos": "noun",
+      "definition": "ein kunstvolles Haarnetz aus Metallfäden für adlige Frauen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Kleidung"
+    },
+    {
+      "id": "w051",
+      "word": "Dagestan",
+      "pos": "noun",
+      "definition": "ein geknüpfter Teppich mit geometrischem Muster aus Schafwolle",
+      "tags": [],
+      "domain": "Handwerk"
+    },
+    {
+      "id": "w052",
+      "word": "darben",
+      "pos": "verb",
+      "definition": "Mangel leiden, vor allem an Essen",
+      "tags": [],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w053",
+      "word": "Daube",
+      "pos": "noun",
+      "definition": "das gebogene Seitenbrett eines Fasses",
+      "tags": [],
+      "domain": "Handwerk"
+    },
+    {
+      "id": "w054",
+      "word": "Daus",
+      "pos": "noun",
+      "definition": "ein Wurf mit zwei Augen beim Würfeln",
+      "tags": [],
+      "domain": "Spiel"
+    },
+    {
+      "id": "w055",
+      "word": "davonstieben",
+      "pos": "verb",
+      "definition": "in alle Richtungen wegrennen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Bewegung"
+    },
+    {
+      "id": "w056",
+      "word": "Debellatio",
+      "pos": "noun",
+      "definition": "die völlige Niederwerfung eines Staates im Krieg",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Militär"
+    },
+    {
+      "id": "w057",
+      "word": "decouvrieren",
+      "pos": "verb",
+      "definition": "etwas Verborgenes ans Licht bringen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w058",
+      "word": "defenestrieren",
+      "pos": "verb",
+      "definition": "jemanden aus dem Fenster werfen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Recht"
+    },
+    {
+      "id": "w059",
+      "word": "Degout",
+      "pos": "noun",
+      "definition": "starke Abneigung gegen jemanden oder etwas",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w060",
+      "word": "deihen",
+      "pos": "verb",
+      "definition": "an Umfang oder Menge zulegen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Natur"
+    },
+    {
+      "id": "w061",
+      "word": "deliberieren",
+      "pos": "verb",
+      "definition": "abwägend überlegen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w062",
+      "word": "Deputat",
+      "pos": "noun",
+      "definition": "Naturalien, die man als Teil des Lohns bekommt",
+      "tags": [],
+      "domain": "Handel"
+    },
+    {
+      "id": "w063",
+      "word": "deuteln",
+      "pos": "verb",
+      "definition": "den Sinn von etwas übertrieben spitzfindig auslegen",
+      "tags": [],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w064",
+      "word": "dingen",
+      "pos": "verb",
+      "definition": "jemanden gegen Lohn anwerben, damit er etwas erledigt",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Handel"
+    },
+    {
+      "id": "w065",
+      "word": "Dole",
+      "pos": "noun",
+      "definition": "ein kleiner, abgedeckter Wassergraben",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w066",
+      "word": "Doline",
+      "pos": "noun",
+      "definition": "eine trichter- oder schüsselförmige Senke in einer Kalklandschaft",
+      "tags": [],
+      "domain": "Geologie"
+    },
+    {
+      "id": "w067",
+      "word": "Dolle",
+      "pos": "noun",
+      "definition": "eine bewegliche Gabel am Bootsrand, in der das Ruder liegt",
+      "tags": [],
+      "domain": "Seefahrt"
+    },
+    {
+      "id": "w068",
+      "word": "dollisieren",
+      "pos": "verb",
+      "definition": "sich dumm und unvernünftig benehmen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verhalten"
+    },
+    {
+      "id": "w069",
+      "word": "Dragonade",
+      "pos": "noun",
+      "definition": "eine Strafaktion von Ludwig XIV. gegen Protestanten",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Geschichte"
+    },
+    {
+      "id": "w070",
+      "word": "Dramolett",
+      "pos": "noun",
+      "definition": "ein kurzes Theaterstück",
+      "tags": [],
+      "domain": "Literatur"
+    },
+    {
+      "id": "w071",
+      "word": "drießen",
+      "pos": "verb",
+      "definition": "Widerwillen empfinden oder müde machen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w072",
+      "word": "Duque",
+      "pos": "noun",
+      "definition": "der höchste Adelsrang in Spanien",
+      "tags": [],
+      "domain": "Gesellschaft"
+    },
+    {
+      "id": "w073",
+      "word": "durabel",
+      "pos": "adj",
+      "definition": "lange haltbar und nicht schnell abgenutzt",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w074",
+      "word": "Dörrleiche",
+      "pos": "noun",
+      "definition": "ein durch Trocknen haltbar gemachter toter Körper",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Geschichte"
+    },
+    {
+      "id": "w075",
+      "word": "Düker",
+      "pos": "noun",
+      "definition": "ein Rohr, das Wasser unter einem Geländeeinschnitt hindurchleitet",
+      "tags": [],
+      "domain": "Technik"
+    },
+    {
+      "id": "w076",
+      "word": "Düppel",
+      "pos": "noun",
+      "definition": "kleine Streifen, mit denen man Radargeräte stören kann",
+      "tags": [],
+      "domain": "Militär"
+    },
+    {
+      "id": "w077",
+      "word": "Ecker",
+      "pos": "noun",
+      "definition": "die Frucht von Buche oder Eiche",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w078",
+      "word": "effizieren",
+      "pos": "verb",
+      "definition": "etwas hervorrufen, zum Beispiel als Reaktion auf gezeigtes Verhalten",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w079",
+      "word": "Ehegespons",
+      "pos": "noun",
+      "definition": "der Mann, mit dem man verheiratet ist",
+      "tags": [
+        "scherzhaft",
+        "veraltet"
+      ],
+      "domain": "Familie"
+    },
+    {
+      "id": "w080",
+      "word": "einpaschen",
+      "pos": "verb",
+      "definition": "Waren heimlich über die Grenze bringen, ohne Zoll zu zahlen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Handel"
+    },
+    {
+      "id": "w081",
+      "word": "elektiv",
+      "pos": "adj",
+      "definition": "bewusst auswählend",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w082",
+      "word": "embetieren",
+      "pos": "verb",
+      "definition": "jemanden langweilen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w083",
+      "word": "erharren",
+      "pos": "verb",
+      "definition": "geduldig auf etwas Ersehntes warten",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w084",
+      "word": "erkecken",
+      "pos": "verb",
+      "definition": "sich etwas Freches trauen, was sich eigentlich nicht gehört",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verhalten"
+    },
+    {
+      "id": "w085",
+      "word": "erkobern",
+      "pos": "verb",
+      "definition": "wieder zu Kräften kommen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Medizin"
+    },
+    {
+      "id": "w086",
+      "word": "erstinken",
+      "pos": "verb",
+      "definition": "verwesen und widerlich riechen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Natur"
+    },
+    {
+      "id": "w087",
+      "word": "eruditiv",
+      "pos": "adj",
+      "definition": "sehr gelehrt und mit umfassendem Wissen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Wissenschaft"
+    },
+    {
+      "id": "w088",
+      "word": "eskamotieren",
+      "pos": "verb",
+      "definition": "etwas durch einen Trick oder geschicktes Verschleiern verschwinden lassen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Verhalten"
+    },
+    {
+      "id": "w089",
+      "word": "Estafette",
+      "pos": "noun",
+      "definition": "eine berittene Eilpost",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verkehr"
+    },
+    {
+      "id": "w090",
+      "word": "fahen",
+      "pos": "verb",
+      "definition": "jemanden oder etwas einfangen und festhalten",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Bewegung"
+    },
+    {
+      "id": "w091",
+      "word": "fallibel",
+      "pos": "adj",
+      "definition": "fehlbar und dem Irrtum unterworfen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w092",
+      "word": "Fanon",
+      "pos": "noun",
+      "definition": "ein zweiteiliges Schultergewand, das der Papst bei feierlichen Messen trägt",
+      "tags": [],
+      "domain": "Kirche"
+    },
+    {
+      "id": "w093",
+      "word": "federn",
+      "pos": "verb",
+      "definition": "einen Verurteilten mit Teer beschmieren und dann mit Gefieder bestreuen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Recht"
+    },
+    {
+      "id": "w094",
+      "word": "Firn",
+      "pos": "noun",
+      "definition": "körniger Schnee im Gebirge, der mindestens ein Jahr alt ist",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w095",
+      "word": "Flett",
+      "pos": "noun",
+      "definition": "der offene Wohnbereich mit Küche im alten niedersächsischen Bauernhaus",
+      "tags": [],
+      "domain": "Architektur"
+    },
+    {
+      "id": "w096",
+      "word": "Flugsalbe",
+      "pos": "noun",
+      "definition": "eine Paste, mit der sich Hexen angeblich einrieben, um durch die Luft zu reisen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Aberglaube"
+    },
+    {
+      "id": "w097",
+      "word": "fortwähren",
+      "pos": "verb",
+      "definition": "weiterhin so bleiben, wie es ist",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Zeit"
+    },
+    {
+      "id": "w098",
+      "word": "Freite",
+      "pos": "noun",
+      "definition": "das Werben um eine zukünftige Ehefrau",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Familie"
+    },
+    {
+      "id": "w099",
+      "word": "fuchsschwänzeln",
+      "pos": "verb",
+      "definition": "jemandem schmeicheln, um ihn für sich zu gewinnen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verhalten"
+    },
+    {
+      "id": "w100",
+      "word": "Fuder",
+      "pos": "noun",
+      "definition": "ein Hohlmaß für Wein von rund tausend Litern",
+      "tags": [],
+      "domain": "Maße"
+    },
+    {
+      "id": "w101",
+      "word": "fürliebnehmen",
+      "pos": "verb",
+      "definition": "sich notgedrungen mit dem zufriedengeben, was gerade da ist",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w102",
+      "word": "gattern",
+      "pos": "verb",
+      "definition": "lauern und gierig schauen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Bewegung"
+    },
+    {
+      "id": "w103",
+      "word": "gewahr",
+      "pos": "adj",
+      "definition": "aufmerksam und etwas bemerkend",
+      "tags": [],
+      "domain": "Denken"
+    },
+    {
+      "id": "w104",
+      "word": "Gewann",
+      "pos": "noun",
+      "definition": "die Stelle am Ackerrand, an der der Pflug gewendet wird",
+      "tags": [],
+      "domain": "Landwirtschaft"
+    },
+    {
+      "id": "w105",
+      "word": "Glacis",
+      "pos": "noun",
+      "definition": "eine Aufschüttung vor dem Graben einer Festung",
+      "tags": [],
+      "domain": "Militär"
+    },
+    {
+      "id": "w106",
+      "word": "Glimpf",
+      "pos": "noun",
+      "definition": "Nachsicht, durch die etwas ohne schlimme Folgen bleibt",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w107",
+      "word": "Gode",
+      "pos": "noun",
+      "definition": "ein Priester und Häuptling im alten Island",
+      "tags": [],
+      "domain": "Geschichte"
+    },
+    {
+      "id": "w108",
+      "word": "Granne",
+      "pos": "noun",
+      "definition": "eine steife Borste an der Spitze der Grasblüte",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w109",
+      "word": "Gravamen",
+      "pos": "noun",
+      "definition": "eine schriftliche Beschwerde, vor allem gegen die Kirche im 15. und 16. Jahrhundert",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Kirche"
+    },
+    {
+      "id": "w110",
+      "word": "gretzen",
+      "pos": "verb",
+      "definition": "jemanden necken oder reizen, bis er sauer wird",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w111",
+      "word": "Grupp",
+      "pos": "noun",
+      "definition": "ein verschlossenes Paket aus Geldrollen für den Versand",
+      "tags": [],
+      "domain": "Geld"
+    },
+    {
+      "id": "w112",
+      "word": "Grus",
+      "pos": "noun",
+      "definition": "durch Verwitterung in kleine Brocken zerfallenes Gestein",
+      "tags": [],
+      "domain": "Geologie"
+    },
+    {
+      "id": "w113",
+      "word": "Grödel",
+      "pos": "noun",
+      "definition": "ein leichtes Steigeisen, das man an die Schuhe schnallt",
+      "tags": [],
+      "domain": "Bergsport"
+    },
+    {
+      "id": "w114",
+      "word": "Göpel",
+      "pos": "noun",
+      "definition": "ein Antrieb für Maschinen, den Tiere im Kreis gehend bewegen",
+      "tags": [],
+      "domain": "Landwirtschaft"
+    },
+    {
+      "id": "w115",
+      "word": "Hagestolz",
+      "pos": "noun",
+      "definition": "ein eingefleischter Junggeselle",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gesellschaft"
+    },
+    {
+      "id": "w116",
+      "word": "Harsch",
+      "pos": "noun",
+      "definition": "eine Kruste auf dem Schnee, die durch Antauen und Wiedergefrieren entsteht",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w117",
+      "word": "Hasenpanier",
+      "pos": "noun",
+      "definition": "der Schwanz eines Langohrs",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Tiere"
+    },
+    {
+      "id": "w118",
+      "word": "Heister",
+      "pos": "noun",
+      "definition": "ein junger, noch ein bis zwei Meter hoher Baum mit einem oder mehreren Haupttrieben",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w119",
+      "word": "Hippe",
+      "pos": "noun",
+      "definition": "ein Messer mit sichelförmiger Klinge zum Abschneiden von Ästen",
+      "tags": [],
+      "domain": "Landwirtschaft"
+    },
+    {
+      "id": "w120",
+      "word": "Hort",
+      "pos": "noun",
+      "definition": "ein Schatz, vor allem aus Gold",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Geld"
+    },
+    {
+      "id": "w121",
+      "word": "humil",
+      "pos": "adj",
+      "definition": "bescheiden und demütig",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Charakter"
+    },
+    {
+      "id": "w122",
+      "word": "Idiotikon",
+      "pos": "noun",
+      "definition": "ein Wörterbuch für Mundart und regionale Ausdrücke",
+      "tags": [],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w123",
+      "word": "impardonnabel",
+      "pos": "adj",
+      "definition": "nicht zu verzeihen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Charakter"
+    },
+    {
+      "id": "w124",
+      "word": "Inbild",
+      "pos": "noun",
+      "definition": "die perfekte Verkörperung von etwas, ein Ideal",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w125",
+      "word": "Interdikt",
+      "pos": "noun",
+      "definition": "das Verbot, kirchliche Handlungen durchzuführen",
+      "tags": [],
+      "domain": "Kirche"
+    },
+    {
+      "id": "w126",
+      "word": "interzedieren",
+      "pos": "verb",
+      "definition": "für jemanden eintreten oder eine Schuld übernehmen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Recht"
+    },
+    {
+      "id": "w127",
+      "word": "Isthmus",
+      "pos": "noun",
+      "definition": "ein schmaler Landstreifen zwischen zwei Gewässern, der zwei größere Landmassen verbindet",
+      "tags": [],
+      "domain": "Geologie"
+    },
+    {
+      "id": "w128",
+      "word": "Jett",
+      "pos": "noun",
+      "definition": "eine besonders harte Braunkohle, die als Schmuckstein dient",
+      "tags": [],
+      "domain": "Geologie"
+    },
+    {
+      "id": "w129",
+      "word": "Julmond",
+      "pos": "noun",
+      "definition": "der Monat Dezember",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Zeit"
+    },
+    {
+      "id": "w130",
+      "word": "kaduk",
+      "pos": "adj",
+      "definition": "gebrechlich und hinfällig",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Medizin"
+    },
+    {
+      "id": "w131",
+      "word": "Kairos",
+      "pos": "noun",
+      "definition": "der genau richtige Augenblick für etwas",
+      "tags": [],
+      "domain": "Zeit"
+    },
+    {
+      "id": "w132",
+      "word": "Kaltmamsell",
+      "pos": "noun",
+      "definition": "Küchenhilfe im Gasthaus, die Vorspeisen und Aufschnitt zubereitet und ausgibt",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Küche"
+    },
+    {
+      "id": "w133",
+      "word": "Kandare",
+      "pos": "noun",
+      "definition": "eine schwere Gebissstange im Maul des Pferdes, Teil des Zaumzeugs",
+      "tags": [],
+      "domain": "Pferde"
+    },
+    {
+      "id": "w134",
+      "word": "Kang",
+      "pos": "noun",
+      "definition": "ein Brett, das Verbrecher um den Hals tragen mussten",
+      "tags": [],
+      "domain": "Recht"
+    },
+    {
+      "id": "w135",
+      "word": "kanzeln",
+      "pos": "verb",
+      "definition": "jemandem eine Strafpredigt halten",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w136",
+      "word": "Karyopse",
+      "pos": "noun",
+      "definition": "eine Nussfrucht, bei der Samenschale und Fruchtwand verwachsen sind",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w137",
+      "word": "Karzer",
+      "pos": "noun",
+      "definition": "ein Arrestraum an Universitäten und Schulen",
+      "tags": [],
+      "domain": "Schule"
+    },
+    {
+      "id": "w138",
+      "word": "Kasel",
+      "pos": "noun",
+      "definition": "das Messgewand katholischer Priester und Bischöfe",
+      "tags": [],
+      "domain": "Kirche"
+    },
+    {
+      "id": "w139",
+      "word": "Kausch",
+      "pos": "noun",
+      "definition": "ein Metallring, der ein Seil oder Segel an der Öse verstärkt",
+      "tags": [],
+      "domain": "Seefahrt"
+    },
+    {
+      "id": "w140",
+      "word": "Kemenate",
+      "pos": "noun",
+      "definition": "ein Zimmer mit offener Feuerstelle",
+      "tags": [],
+      "domain": "Architektur"
+    },
+    {
+      "id": "w141",
+      "word": "Kennel",
+      "pos": "noun",
+      "definition": "eine Wasserrinne am Dach aus Holz oder Metall",
+      "tags": [],
+      "domain": "Architektur"
+    },
+    {
+      "id": "w142",
+      "word": "kesseln",
+      "pos": "verb",
+      "definition": "auf dem Ruheplatz der Rotte liegen",
+      "tags": [],
+      "domain": "Jagd"
+    },
+    {
+      "id": "w143",
+      "word": "Kienholz",
+      "pos": "noun",
+      "definition": "ein sehr harzhaltiges Stück vom Baum",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w144",
+      "word": "Kindel",
+      "pos": "noun",
+      "definition": "ein Ableger, der aus der Mutterpflanze herauswächst",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w145",
+      "word": "kirren",
+      "pos": "verb",
+      "definition": "ein Pferd zähmen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Tiere"
+    },
+    {
+      "id": "w146",
+      "word": "Kline",
+      "pos": "noun",
+      "definition": "eine antike griechische Liege, die zum Ruhen und später auch beim Essen diente",
+      "tags": [],
+      "domain": "Antike"
+    },
+    {
+      "id": "w147",
+      "word": "Knittel",
+      "pos": "noun",
+      "definition": "eine Schlagwaffe aus Holz",
+      "tags": [],
+      "domain": "Militär"
+    },
+    {
+      "id": "w148",
+      "word": "Kober",
+      "pos": "noun",
+      "definition": "jemand, der einzelne Zimmer vermietet",
+      "tags": [],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w149",
+      "word": "Kolk",
+      "pos": "noun",
+      "definition": "eine kleine, wassergefüllte Vertiefung",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w150",
+      "word": "kommensurabel",
+      "pos": "adj",
+      "definition": "mit demselben Maß messbar, vergleichbar",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Wissenschaft"
+    },
+    {
+      "id": "w151",
+      "word": "Konvikt",
+      "pos": "noun",
+      "definition": "ein Wohnheim für katholische Schüler oder Studenten, die Priester werden wollen",
+      "tags": [],
+      "domain": "Kirche"
+    },
+    {
+      "id": "w152",
+      "word": "Kordon",
+      "pos": "noun",
+      "definition": "eine Absperrung aus einer Reihe von Polizisten oder Soldaten",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Militär"
+    },
+    {
+      "id": "w153",
+      "word": "Kragarm",
+      "pos": "noun",
+      "definition": "ein einseitig gelagerter Balken, der frei in den Raum ragt",
+      "tags": [],
+      "domain": "Architektur"
+    },
+    {
+      "id": "w154",
+      "word": "Kuder",
+      "pos": "noun",
+      "definition": "ein männliches Tier der Europäischen Wildkatze",
+      "tags": [],
+      "domain": "Tiere"
+    },
+    {
+      "id": "w155",
+      "word": "Kujon",
+      "pos": "noun",
+      "definition": "ein niederträchtiger Mensch",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gesellschaft"
+    },
+    {
+      "id": "w156",
+      "word": "Köper",
+      "pos": "noun",
+      "definition": "eine Webart, bei der der Schussfaden unter einem Kettfaden und dann über mehreren liegt",
+      "tags": [],
+      "domain": "Handwerk"
+    },
+    {
+      "id": "w157",
+      "word": "Kürassier",
+      "pos": "noun",
+      "definition": "ein Soldat der schweren Reiterei mit Brustpanzer",
+      "tags": [],
+      "domain": "Militär"
+    },
+    {
+      "id": "w158",
+      "word": "Laffe",
+      "pos": "noun",
+      "definition": "der vordere, leicht gewölbte Teil eines Löffels",
+      "tags": [],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w159",
+      "word": "Lecker",
+      "pos": "noun",
+      "definition": "die Zunge von Dam-, Reh- und Rotwild",
+      "tags": [],
+      "domain": "Jagd"
+    },
+    {
+      "id": "w160",
+      "word": "Liek",
+      "pos": "noun",
+      "definition": "die Kante oder der Rand eines Segels",
+      "tags": [],
+      "domain": "Seefahrt"
+    },
+    {
+      "id": "w161",
+      "word": "Lode",
+      "pos": "noun",
+      "definition": "ein Ausschlag von Stock oder Wurzel bei Laubbäumen",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w162",
+      "word": "Logge",
+      "pos": "noun",
+      "definition": "ein Gerät, das die Geschwindigkeit eines Schiffs misst",
+      "tags": [],
+      "domain": "Seefahrt"
+    },
+    {
+      "id": "w163",
+      "word": "lottern",
+      "pos": "verb",
+      "definition": "ein ausschweifendes Leben führen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Gesellschaft"
+    },
+    {
+      "id": "w164",
+      "word": "Luginsland",
+      "pos": "noun",
+      "definition": "ein hoher Wachturm mit Aussicht in die Gegend",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Architektur"
+    },
+    {
+      "id": "w165",
+      "word": "lukulent",
+      "pos": "adj",
+      "definition": "klar und deutlich",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w166",
+      "word": "Lutter",
+      "pos": "noun",
+      "definition": "das erste schwache Destillat aus der Maische beim Schnapsbrennen",
+      "tags": [],
+      "domain": "Handwerk"
+    },
+    {
+      "id": "w167",
+      "word": "Lände",
+      "pos": "noun",
+      "definition": "eine Anlegestelle an einem Gewässer",
+      "tags": [],
+      "domain": "Seefahrt"
+    },
+    {
+      "id": "w168",
+      "word": "Löss",
+      "pos": "noun",
+      "definition": "ein schluffiges Sedimentgestein, das vom Wind abgelagert wurde",
+      "tags": [],
+      "domain": "Geologie"
+    },
+    {
+      "id": "w169",
+      "word": "Macchie",
+      "pos": "noun",
+      "definition": "immergrüne Buschlandschaft im Mittelmeerraum",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w170",
+      "word": "magdeburgisieren",
+      "pos": "verb",
+      "definition": "eine Stadt in Schutt und Asche legen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Militär"
+    },
+    {
+      "id": "w171",
+      "word": "Mahlgang",
+      "pos": "noun",
+      "definition": "ein Paar Scheiben in einer Mühle, zwischen denen das Korn zerrieben wird",
+      "tags": [],
+      "domain": "Handwerk"
+    },
+    {
+      "id": "w172",
+      "word": "Mastaba",
+      "pos": "noun",
+      "definition": "ein flacher, blockartiger Grabbau aus Lehmziegeln oder Steinen",
+      "tags": [],
+      "domain": "Antike"
+    },
+    {
+      "id": "w173",
+      "word": "Mulm",
+      "pos": "noun",
+      "definition": "staubartiges, zerfallenes Material",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w174",
+      "word": "Mummelputz",
+      "pos": "noun",
+      "definition": "eine Vogelscheuche oder Schreckgestalt",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Aberglaube"
+    },
+    {
+      "id": "w175",
+      "word": "mutuell",
+      "pos": "adj",
+      "definition": "von beiden Seiten gleichermaßen zutreffend",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w176",
+      "word": "Nachtmahr",
+      "pos": "noun",
+      "definition": "ein Schreckgespenst, das im Traum auftaucht",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Aberglaube"
+    },
+    {
+      "id": "w177",
+      "word": "Nachzehrer",
+      "pos": "noun",
+      "definition": "ein Toter, der laut Sage wieder lebendig wird",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Aberglaube"
+    },
+    {
+      "id": "w178",
+      "word": "Nadir",
+      "pos": "noun",
+      "definition": "der tiefste Punkt des Himmels, genau unter dem Betrachter",
+      "tags": [],
+      "domain": "Wissenschaft"
+    },
+    {
+      "id": "w179",
+      "word": "Obergaden",
+      "pos": "noun",
+      "definition": "der Wandabschnitt mit Fenstern über den Arkaden im Mittelschiff einer Basilika",
+      "tags": [],
+      "domain": "Architektur"
+    },
+    {
+      "id": "w180",
+      "word": "Oblomowerei",
+      "pos": "noun",
+      "definition": "ständiges Verharren in Untätigkeit",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Verhalten"
+    },
+    {
+      "id": "w181",
+      "word": "odios",
+      "pos": "adj",
+      "definition": "außerordentlich unangenehm",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w182",
+      "word": "Offizial",
+      "pos": "noun",
+      "definition": "ein Vertreter des Bischofs, der in dessen Namen Recht spricht",
+      "tags": [],
+      "domain": "Kirche"
+    },
+    {
+      "id": "w183",
+      "word": "Oikopoiese",
+      "pos": "noun",
+      "definition": "die Schaffung einer eigenen Welt oder Heimat",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w184",
+      "word": "ostendieren",
+      "pos": "verb",
+      "definition": "etwas zeigen und vorführen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w185",
+      "word": "Ostrakon",
+      "pos": "noun",
+      "definition": "eine Tonscherbe, auf der kurze Notizen stehen",
+      "tags": [],
+      "domain": "Antike"
+    },
+    {
+      "id": "w186",
+      "word": "outrieren",
+      "pos": "verb",
+      "definition": "etwas übertrieben darstellen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w187",
+      "word": "Pals",
+      "pos": "noun",
+      "definition": "eine Aufwölbung aus Torf und Eis im Frostboden",
+      "tags": [],
+      "domain": "Geologie"
+    },
+    {
+      "id": "w188",
+      "word": "Pappus",
+      "pos": "noun",
+      "definition": "der Haarkranz an Korbblütlerfrüchten, der sie mit dem Wind verbreitet",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w189",
+      "word": "perhorreszieren",
+      "pos": "verb",
+      "definition": "etwas voller Abscheu zurückweisen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w190",
+      "word": "Peristom",
+      "pos": "noun",
+      "definition": "der Bereich rund um die Mundöffnung",
+      "tags": [],
+      "domain": "Biologie"
+    },
+    {
+      "id": "w191",
+      "word": "Pfahlbürger",
+      "pos": "noun",
+      "definition": "jemand mit Stadtrecht, der aber außerhalb der Stadtmauern wohnt",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verwaltung"
+    },
+    {
+      "id": "w192",
+      "word": "Pfleghof",
+      "pos": "noun",
+      "definition": "das Amts- und Wirtschaftsgebäude eines Klosters in der Stadt",
+      "tags": [],
+      "domain": "Kirche"
+    },
+    {
+      "id": "w193",
+      "word": "Piaffe",
+      "pos": "noun",
+      "definition": "eine Dressurfigur, bei der das Pferd auf der Stelle trabt",
+      "tags": [],
+      "domain": "Pferde"
+    },
+    {
+      "id": "w194",
+      "word": "Pickelhering",
+      "pos": "noun",
+      "definition": "ein eingepökelter Fisch",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Küche"
+    },
+    {
+      "id": "w195",
+      "word": "Pile",
+      "pos": "noun",
+      "definition": "ein früher Kernreaktor aus gestapelten Uran- und Graphitblöcken",
+      "tags": [],
+      "domain": "Technik"
+    },
+    {
+      "id": "w196",
+      "word": "Pinge",
+      "pos": "noun",
+      "definition": "eine Mulde über einem eingestürzten Stollen",
+      "tags": [],
+      "domain": "Bergbau"
+    },
+    {
+      "id": "w197",
+      "word": "Plastron",
+      "pos": "noun",
+      "definition": "eine breite Seidenkrawatte für festliche Anlässe",
+      "tags": [],
+      "domain": "Kleidung"
+    },
+    {
+      "id": "w198",
+      "word": "pokulieren",
+      "pos": "verb",
+      "definition": "kräftig zechen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w199",
+      "word": "poldern",
+      "pos": "verb",
+      "definition": "laut Krach machen oder aufbrausen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Verhalten"
+    },
+    {
+      "id": "w200",
+      "word": "Popanz",
+      "pos": "noun",
+      "definition": "eine nicht ernst zu nehmende Schreckgestalt",
+      "tags": [],
+      "domain": "Aberglaube"
+    },
+    {
+      "id": "w201",
+      "word": "Portepee",
+      "pos": "noun",
+      "definition": "eine versilberte oder vergoldete Quaste am Degen oder Säbel",
+      "tags": [],
+      "domain": "Militär"
+    },
+    {
+      "id": "w202",
+      "word": "Poussierstängel",
+      "pos": "noun",
+      "definition": "ein junger Mann, der gern Mädchen umschmeichelt",
+      "tags": [
+        "scherzhaft",
+        "veraltet"
+      ],
+      "domain": "Gesellschaft"
+    },
+    {
+      "id": "w203",
+      "word": "Prahm",
+      "pos": "noun",
+      "definition": "ein flaches Arbeitsboot ohne Eigenantrieb für sperrige Lasten",
+      "tags": [],
+      "domain": "Seefahrt"
+    },
+    {
+      "id": "w204",
+      "word": "pretiös",
+      "pos": "adj",
+      "definition": "nicht echt und gekünstelt",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Charakter"
+    },
+    {
+      "id": "w205",
+      "word": "Priel",
+      "pos": "noun",
+      "definition": "ein natürlicher Wasserlauf im Watt, der mit den Gezeiten fließt",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w206",
+      "word": "prädiktabel",
+      "pos": "adj",
+      "definition": "wissenschaftlich vorhersagbar",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Wissenschaft"
+    },
+    {
+      "id": "w207",
+      "word": "prätendieren",
+      "pos": "verb",
+      "definition": "Anspruch auf etwas erheben",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Recht"
+    },
+    {
+      "id": "w208",
+      "word": "präterieren",
+      "pos": "verb",
+      "definition": "etwas auslassen oder übergehen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w209",
+      "word": "prävenieren",
+      "pos": "verb",
+      "definition": "jemandem zuvorkommen und vorher einwirken",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Verhalten"
+    },
+    {
+      "id": "w210",
+      "word": "Quadrille",
+      "pos": "noun",
+      "definition": "eine Gruppe von vier Reitern",
+      "tags": [],
+      "domain": "Pferde"
+    },
+    {
+      "id": "w211",
+      "word": "Quickborn",
+      "pos": "noun",
+      "definition": "eine Quelle, deren Wasser angeblich heilt und verjüngt",
+      "tags": [],
+      "domain": "Aberglaube"
+    },
+    {
+      "id": "w212",
+      "word": "Quisquilie",
+      "pos": "noun",
+      "definition": "eine Kleinigkeit",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w213",
+      "word": "Rade",
+      "pos": "noun",
+      "definition": "eine wilde Ackerpflanze",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w214",
+      "word": "radotieren",
+      "pos": "verb",
+      "definition": "albern daherreden und faseln",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w215",
+      "word": "Rakel",
+      "pos": "noun",
+      "definition": "ein Werkzeug, mit dem man Folien glattstreicht oder abkratzt",
+      "tags": [],
+      "domain": "Handwerk"
+    },
+    {
+      "id": "w216",
+      "word": "Ramsch",
+      "pos": "noun",
+      "definition": "eine Skatrunde, bei der keiner ein Spiel ansagt",
+      "tags": [],
+      "domain": "Spiel"
+    },
+    {
+      "id": "w217",
+      "word": "rank",
+      "pos": "adj",
+      "definition": "dünn, geschmeidig und biegsam",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Aussehen"
+    },
+    {
+      "id": "w218",
+      "word": "Reduit",
+      "pos": "noun",
+      "definition": "der gesicherte Kernbereich einer Festung, in den sich Truppen zurückziehen",
+      "tags": [],
+      "domain": "Militär"
+    },
+    {
+      "id": "w219",
+      "word": "Rispe",
+      "pos": "noun",
+      "definition": "ein Blütenstand, der sich von einer Hauptachse aus mehrfach verzweigt",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w220",
+      "word": "Rodomontade",
+      "pos": "noun",
+      "definition": "großspuriges Gerede über die eigenen Taten",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w221",
+      "word": "Schaab",
+      "pos": "noun",
+      "definition": "ein Strohlager für Tote",
+      "tags": [],
+      "domain": "Geschichte"
+    },
+    {
+      "id": "w222",
+      "word": "Schemen",
+      "pos": "noun",
+      "definition": "eine undeutlich erkennbare, verschwommene Gestalt",
+      "tags": [],
+      "domain": "Aussehen"
+    },
+    {
+      "id": "w223",
+      "word": "Schiege",
+      "pos": "noun",
+      "definition": "ein Mischling aus Schaf und Ziege",
+      "tags": [],
+      "domain": "Tiere"
+    },
+    {
+      "id": "w224",
+      "word": "schmachbeladen",
+      "pos": "adj",
+      "definition": "tief erniedrigt und in der Würde verletzt",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w225",
+      "word": "Schola",
+      "pos": "noun",
+      "definition": "eine Vereinigung von Lehrern und Schülern zur Pflege mittelalterlicher Chormusik",
+      "tags": [],
+      "domain": "Musik"
+    },
+    {
+      "id": "w226",
+      "word": "Schuber",
+      "pos": "noun",
+      "definition": "eine Schutzhülle aus Karton für Bücher, an einer Schmalseite offen",
+      "tags": [],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w227",
+      "word": "Schwemme",
+      "pos": "noun",
+      "definition": "eine seichte Stelle am Wasser, wo Pferde und Schafe gebadet werden",
+      "tags": [],
+      "domain": "Pferde"
+    },
+    {
+      "id": "w228",
+      "word": "schwichtigen",
+      "pos": "verb",
+      "definition": "jemanden zum Schweigen bringen oder beruhigen",
+      "tags": [
+        "gehoben",
+        "veraltet"
+      ],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w229",
+      "word": "schütter",
+      "pos": "adj",
+      "definition": "dünn bewachsen, schwach im Wuchs",
+      "tags": [],
+      "domain": "Aussehen"
+    },
+    {
+      "id": "w230",
+      "word": "Seppel",
+      "pos": "noun",
+      "definition": "eine Figur aus dem Kasperletheater",
+      "tags": [],
+      "domain": "Theater"
+    },
+    {
+      "id": "w231",
+      "word": "septiert",
+      "pos": "adj",
+      "definition": "durch Scheidewände unterteilt",
+      "tags": [],
+      "domain": "Biologie"
+    },
+    {
+      "id": "w232",
+      "word": "seren",
+      "pos": "adj",
+      "definition": "heiter und fröhlich",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w233",
+      "word": "Siele",
+      "pos": "noun",
+      "definition": "ein leichtes Brustgeschirr für Pferde, an dem die Zugstränge hängen",
+      "tags": [],
+      "domain": "Pferde"
+    },
+    {
+      "id": "w234",
+      "word": "Sima",
+      "pos": "noun",
+      "definition": "der Dachrand antiker griechischer und römischer Bauten aus Ton oder Marmor",
+      "tags": [],
+      "domain": "Architektur"
+    },
+    {
+      "id": "w235",
+      "word": "Sinter",
+      "pos": "noun",
+      "definition": "eine poröse Ablagerung aus Kalk oder Kiesel, die fließendes Wasser hinterlässt",
+      "tags": [],
+      "domain": "Geologie"
+    },
+    {
+      "id": "w236",
+      "word": "siriusfern",
+      "pos": "adj",
+      "definition": "sehr weit entfernt",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Wissenschaft"
+    },
+    {
+      "id": "w237",
+      "word": "sistieren",
+      "pos": "verb",
+      "definition": "etwas unterbrechen, hemmen oder aufhalten",
+      "tags": [],
+      "domain": "Recht"
+    },
+    {
+      "id": "w238",
+      "word": "soupieren",
+      "pos": "verb",
+      "definition": "mit Gästen festlich zu Abend essen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gastronomie"
+    },
+    {
+      "id": "w239",
+      "word": "Spülicht",
+      "pos": "noun",
+      "definition": "Wasser, das zum Waschen benutzt wurde",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w240",
+      "word": "staken",
+      "pos": "verb",
+      "definition": "ungelenk gehen",
+      "tags": [],
+      "domain": "Bewegung"
+    },
+    {
+      "id": "w241",
+      "word": "Striegel",
+      "pos": "noun",
+      "definition": "eine harte Bürste mit Zähnen zur Fellpflege bei Haustieren",
+      "tags": [],
+      "domain": "Pferde"
+    },
+    {
+      "id": "w242",
+      "word": "Stylus",
+      "pos": "noun",
+      "definition": "der verlängerte Teil des Fruchtknotens einer Blüte, der die Narbe trägt",
+      "tags": [],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w243",
+      "word": "sudeln",
+      "pos": "verb",
+      "definition": "in der Küche mit viel Wasser Reinigungsarbeiten erledigen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w244",
+      "word": "Tampen",
+      "pos": "noun",
+      "definition": "das Ende eines Taus oder einer Leine",
+      "tags": [],
+      "domain": "Seefahrt"
+    },
+    {
+      "id": "w245",
+      "word": "Tete",
+      "pos": "noun",
+      "definition": "die Spitze einer militärischen Einheit",
+      "tags": [],
+      "domain": "Militär"
+    },
+    {
+      "id": "w246",
+      "word": "timid",
+      "pos": "adj",
+      "definition": "schüchtern und ängstlich",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Charakter"
+    },
+    {
+      "id": "w247",
+      "word": "tolldreist",
+      "pos": "adj",
+      "definition": "unverschämt und frech bis zur Verwegenheit",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Charakter"
+    },
+    {
+      "id": "w248",
+      "word": "Troyer",
+      "pos": "noun",
+      "definition": "ein Seemannspullover mit verschließbarem Rollkragen",
+      "tags": [],
+      "domain": "Kleidung"
+    },
+    {
+      "id": "w249",
+      "word": "Tympanon",
+      "pos": "noun",
+      "definition": "das oft geschmückte Giebelfeld eines antiken Tempels",
+      "tags": [],
+      "domain": "Antike"
+    },
+    {
+      "id": "w250",
+      "word": "Unschlitt",
+      "pos": "noun",
+      "definition": "festes Fett, das man aus Wiederkäuern gewinnt",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Küche"
+    },
+    {
+      "id": "w251",
+      "word": "verhehlen",
+      "pos": "verb",
+      "definition": "jemandem Gefühle oder Gedanken verheimlichen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Sprache"
+    },
+    {
+      "id": "w252",
+      "word": "verlodern",
+      "pos": "verb",
+      "definition": "in hellen Flammen verbrennen",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Natur"
+    },
+    {
+      "id": "w253",
+      "word": "Warft",
+      "pos": "noun",
+      "definition": "ein künstlich aufgeworfener Erdhügel im Marschland, auf dem ein Haus steht",
+      "tags": [],
+      "domain": "Geologie"
+    },
+    {
+      "id": "w254",
+      "word": "Warp",
+      "pos": "noun",
+      "definition": "ein fest gedrehter Kettfaden",
+      "tags": [],
+      "domain": "Handwerk"
+    },
+    {
+      "id": "w255",
+      "word": "Wehle",
+      "pos": "noun",
+      "definition": "ein Wasserloch, das ein Deichbruch aufgespült hat",
+      "tags": [],
+      "domain": "Natur"
+    },
+    {
+      "id": "w256",
+      "word": "Wiek",
+      "pos": "noun",
+      "definition": "ein befestigter Handelsplatz am Wasser im frühen Mittelalter",
+      "tags": [],
+      "domain": "Geschichte"
+    },
+    {
+      "id": "w257",
+      "word": "Wolfspfirsich",
+      "pos": "noun",
+      "definition": "die rote, runde Frucht, die wir heute Tomate nennen",
+      "tags": [
+        "veraltet"
+      ],
+      "domain": "Pflanzen"
+    },
+    {
+      "id": "w258",
+      "word": "wüsten",
+      "pos": "verb",
+      "definition": "mit etwas sehr verschwenderisch umgehen",
+      "tags": [],
+      "domain": "Alltag"
+    },
+    {
+      "id": "w259",
+      "word": "zagen",
+      "pos": "verb",
+      "definition": "ängstlich zögern",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Gefühl"
+    },
+    {
+      "id": "w260",
+      "word": "Zeese",
+      "pos": "noun",
+      "definition": "ein Schleppnetz",
+      "tags": [],
+      "domain": "Seefahrt"
+    },
+    {
+      "id": "w261",
+      "word": "Zeidelbär",
+      "pos": "noun",
+      "definition": "ein Raubtier mit braunem oder schwarzem Fell, das Honig frisst",
+      "tags": [
+        "gehoben",
+        "veraltet"
+      ],
+      "domain": "Tiere"
+    },
+    {
+      "id": "w262",
+      "word": "zeitigen",
+      "pos": "verb",
+      "definition": "etwas hervorbringen, Folgen haben",
+      "tags": [
+        "gehoben"
+      ],
+      "domain": "Denken"
+    },
+    {
+      "id": "w263",
+      "word": "Zindel",
+      "pos": "noun",
+      "definition": "ein dünner Seidenstoff, den man oft zum Füttern benutzte",
+      "tags": [],
+      "domain": "Kleidung"
+    },
+    {
+      "id": "w264",
+      "word": "Zwiesel",
+      "pos": "noun",
+      "definition": "der Teil des Sattels, der den Pferderücken umspannt",
+      "tags": [],
+      "domain": "Pferde"
+    }
+  ]
+}
