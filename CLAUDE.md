@@ -18,7 +18,10 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
   Prompt-Beispiele nie aus den Eval-Fällen nehmen (Überanpassung).
 - M4 Client: ✅ technisch (`client/`, Preact 11 + Vite, ~10 KB JS gz), E2E grün (`e2e/`, System-Edge).
   Offen: Testrunde im WLAN mit echten Handys (macht der Nutzer).
-- Nächstes: M6 Härtung (M5 Wortliste läuft parallel beim Sonnet-Agenten)
+- M5 Wortliste: ✅ `data/words.json` (264 Wörter, vom Nutzer gestrichen). **Nie ansehen/ausgeben** (Spoiler).
+- M6 Härtung: ✅ Verbindungslimits (60/IP, 2000 gesamt), Security-Header/CSP, `/healthz` als JSON
+  (`activeGames` für Deploy-Checks), Lasttest `npm run loadtest` (20×10×3, Heap stabil ~11 MB).
+- Nächstes: M7 Tech-Preview online
 - Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
   `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
 
@@ -44,6 +47,7 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
 - `npm test`: Vitest (Unit und Integration)
 - `npm run typecheck`: `tsc --noEmit`
 - `npm run eval:judge`: Haiku-Evals gegen die echte API (kostet Geld, nur bei Prompt-Änderungen)
+- `npm run loadtest`: Last- und Leck-Test (Parameter per Env: LOBBIES, PLAYERS, ROUNDS, BATCHES)
 - `npm run build`: Client nach `client/dist` (der Node-Server liefert ihn aus)
 - `npm run dev:client`: Vite-Devserver mit Proxy auf den Node-Server (Port 3000)
 - `npm run test:e2e`: Playwright gegen System-Edge (`channel: 'msedge'`, **keine** Browser-Downloads).

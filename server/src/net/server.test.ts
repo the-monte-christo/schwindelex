@@ -286,6 +286,10 @@ describe('static files', () => {
     expect(await (await fetch(`${base}/lobby/ABCD`)).text()).toContain('Schwindelex');
     expect((await fetch(`${base}/fehlt.js`)).status).toBe(404);
     expect((await fetch(`${base}/..%2f..%2fpackage.json`)).status).not.toBe(200);
-    expect(await (await fetch(`${base}/healthz`)).text()).toMatch(/^ok/);
+    expect(await (await fetch(`${base}/healthz`)).json()).toMatchObject({ ok: true, lobbies: 0 });
+    const page = await fetch(`${base}/`);
+    expect(page.headers.get('content-security-policy')).toContain("default-src 'self'");
+    expect(page.headers.get('x-content-type-options')).toBe('nosniff');
+    expect((await fetch(`${base}/%E0%A4%A`)).status).toBe(400);
   });
 });

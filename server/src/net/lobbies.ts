@@ -43,6 +43,8 @@ export interface ManagerOptions {
   idleMs?: number;
   maxAgeMs?: number;
   maxLobbies?: number;
+  /** Lobby creations per IP per 10 minutes. */
+  createLimit?: number;
   log?: (msg: string) => void;
 }
 
@@ -71,10 +73,11 @@ export class LobbyManager {
       idleMs: 30 * 60_000,
       maxAgeMs: 12 * 60 * 60_000,
       maxLobbies: 200,
+      createLimit: 10,
       log: (msg) => console.log(msg),
       ...options,
     };
-    this.createLimiter = new RateLimiter(10, 10 * 60_000, this.opts.now);
+    this.createLimiter = new RateLimiter(this.opts.createLimit, 10 * 60_000, this.opts.now);
     this.joinFailures = new RateLimiter(20, 60_000, this.opts.now);
   }
 
@@ -121,6 +124,15 @@ export class LobbyManager {
     }
     this.createLimiter.sweep();
     this.joinFailures.sweep();
+  }
+
+  /** Lobbies with a game in progress (for deploy checks). */
+  activeGames(): number {
+    let n = 0;
+    for (const lobby of this.lobbies.values()) {
+      if (lobby.game.phase !== 'lobby' && [...lobby.sessions.values()].some((s) => s.peer)) n++;
+    }
+    return n;
   }
 
   close(): void {

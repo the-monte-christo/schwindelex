@@ -16,6 +16,9 @@ export interface ServerOptions extends ManagerOptions {
   staticDir?: string;
   trustProxy?: boolean;
   heartbeatMs?: number;
+  /** Open WebSockets per IP – a party shares one IP, so keep it generous. */
+  maxConnectionsPerIp?: number;
+  maxConnections?: number;
 }
 
 export interface RunningServer {
@@ -40,6 +43,16 @@ const MIME: Record<string, string> = {
 /** Max client messages per second per connection (drafts are debounced client-side). */
 const MESSAGES_PER_SECOND = 20;
 
+const SECURITY_HEADERS = {
+  'x-content-type-options': 'nosniff',
+  'referrer-policy': 'no-referrer',
+  'x-frame-options': 'DENY',
+  // inline styles stay allowed for per-element rotation in the scribbly design
+  'content-security-policy':
+    "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss:; " +
+    "frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
+};
+
 export async function startServer(options: ServerOptions): Promise<RunningServer> {
   const manager = new LobbyManager(options);
   const staticDir = options.staticDir ? resolve(options.staticDir) : null;
@@ -54,12 +67,14 @@ export async function startServer(options: ServerOptions): Promise<RunningServer
 
   async function handleHttp(req: IncomingMessage, res: ServerResponse): Promise<void> {
     const url = new URL(req.url ?? '/', 'http://x');
+    for (const [name, value] of Object.entries(SECURITY_HEADERS)) res.setHeader(name, value);
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       res.writeHead(405).end();
       return;
     }
     if (url.pathname === '/healthz') {
-      res.writeHead(200, { 'content-type': 'text/plain' }).end(`ok ${manager.lobbies.size}`);
+      const health = { ok: true, lobbies: manager.lobbies.size, activeGames: manager.activeGames(), connections: wss.clients.size };
+      res.writeHead(200, { 'content-type': 'application/json', 'cache-control': 'no-store' }).end(JSON.stringify(health));
       return;
     }
     const qr = /^\/qr\/([A-Za-z]{4})\.svg$/.exec(url.pathname);
@@ -81,19 +96,31 @@ export async function startServer(options: ServerOptions): Promise<RunningServer
   }
 
   const wss = new WebSocketServer({ noServer: true, maxPayload: 4096 });
+  const perIp = new Map<string, number>();
+  const maxPerIp = options.maxConnectionsPerIp ?? 60;
+  const maxTotal = options.maxConnections ?? 2000;
+
   http.on('upgrade', (req, socket, head) => {
-    if (new URL(req.url ?? '/', 'http://x').pathname !== '/ws') {
-      socket.destroy();
+    const ip = clientIp(req, options.trustProxy ?? false);
+    const pathOk = (req.url ?? '').split('?')[0] === '/ws';
+    if (!pathOk || wss.clients.size >= maxTotal || (perIp.get(ip) ?? 0) >= maxPerIp) {
+      socket.end(pathOk ? 'HTTP/1.1 503 Service Unavailable\r\n\r\n' : 'HTTP/1.1 404 Not Found\r\n\r\n');
       return;
     }
-    wss.handleUpgrade(req, socket, head, (ws) => onConnection(ws, req));
+    wss.handleUpgrade(req, socket, head, (ws) => onConnection(ws, ip));
   });
 
   const alive = new WeakSet<WebSocket>();
 
-  function onConnection(ws: WebSocket, req: IncomingMessage): void {
+  function onConnection(ws: WebSocket, ip: string): void {
+    perIp.set(ip, (perIp.get(ip) ?? 0) + 1);
+    ws.once('close', () => {
+      const n = (perIp.get(ip) ?? 1) - 1;
+      if (n > 0) perIp.set(ip, n);
+      else perIp.delete(ip);
+    });
     const peer: Peer = {
-      ip: clientIp(req, options.trustProxy ?? false),
+      ip,
       send(msg: ServerMessage) {
         if (ws.readyState === ws.OPEN) ws.send(JSON.stringify(msg));
       },
@@ -163,7 +190,14 @@ function serveStatic(root: string | null, pathname: string, res: ServerResponse)
     res.writeHead(404, { 'content-type': 'text/plain' }).end('client not built');
     return;
   }
-  let file = resolve(join(root, normalize(decodeURIComponent(pathname))));
+  let decoded: string;
+  try {
+    decoded = decodeURIComponent(pathname);
+  } catch {
+    res.writeHead(400).end();
+    return;
+  }
+  let file = resolve(join(root, normalize(decoded)));
   if (file !== root && !file.startsWith(root + sep)) {
     res.writeHead(403).end();
     return;

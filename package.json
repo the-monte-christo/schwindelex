@@ -17,7 +17,8 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "typecheck": "tsc --noEmit && tsc --noEmit -p client",
-    "eval:judge": "node server/src/ai/eval/runJudgeEval.ts"
+    "eval:judge": "node server/src/ai/eval/runJudgeEval.ts",
+    "loadtest": "node --expose-gc server/src/loadtest.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
