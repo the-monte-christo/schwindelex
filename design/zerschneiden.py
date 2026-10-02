@@ -104,6 +104,8 @@ def write_sprite(masks: dict[str, Image.Image]) -> None:
         f"export const ICON_NAMES = {json.dumps(names)} as const;\n"
         "export type IconName = (typeof ICON_NAMES)[number];\n",
         encoding="utf-8",
+        newline="
+",
     )
     # Position jedes Motivs im Sprite als CSS-Variable: .icon-<name> für Elemente,
     # --icon-<name> direkt nutzbar in Pseudo-Elementen (z. B. Unterstreichungen).
