@@ -101,7 +101,8 @@ test('four players play a round, reconnect, invite a late player and finish', as
   for (const p of [bob, cleo, dora, emil]) await p.getByRole('button', { name: 'Passen' }).click();
 
   for (const p of [...all, emil]) await expect(p.getByText('Siegerehrung')).toBeVisible();
-  await expect(anna.getByLabel('Endstand')).toContainText('🏆');
+  await expect(anna.getByLabel('Endstand')).toContainText('1. ');
+  await expect(anna.locator('.podium li[data-place="1"] .icon-trophy').first()).toBeVisible();
 
   // The lobby is gone after the podium
   expect((await anna.request.get(`/qr/${code}.svg`)).status()).toBe(404);

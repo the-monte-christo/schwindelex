@@ -23,11 +23,16 @@ Spec: [project.md](project.md) · Regeln, Architektur, Milestones: [PLAN.md](PLA
   (`activeGames` für Deploy-Checks), Lasttest `npm run loadtest` (20×10×3, Heap stabil ~11 MB).
 - M7 Tech-Preview: ✅ online unter https://schwindelex.blanke.nrw (2026-10-02). Smoke-Test über wss mit
   Haiku ok (~1 s pro Runde). Updates: `~/schwindelex-setup/deploy.sh` auf dem Server (nach Absprache).
-- M8 Design: in Arbeit. CSS-Gerüst fertig (`client/src/style.css`: Tokens hell=Papier/Tinte,
-  dunkel=Tafel/Kreide, Post-its, Stapel, Stempel, Animationen mit reduced-motion). Offen: Bild-Assets vom
-  Nutzer (Prompts in `design/bild-prompts.md`), dann zerschneiden und einbauen.
-  Screenshots zur Sichtprüfung: `npx playwright test e2e/screens.spec.ts` → `test-results/screens/`
-  (mobil hell/dunkel, desktop). Der Test prüft auch auf horizontalen Overflow.
+- M8 Design: ✅ lokal (`client/src/style.css`: Tokens hell=Papier/Tinte, dunkel=Tafel/Kreide, Post-its,
+  Stapel, Stempel, Kritzeleien, Animationen mit reduced-motion). Noch nicht auf dem Server.
+  - Bild-Assets: Rohbilder in `design/roh/` (gitignored, Prompts in `design/bild-prompts.md`).
+    `python design/zerschneiden.py` → Icon-Sprite `client/src/assets/icons.webp` + `icons.gen.ts/.css`
+    + Favicons in `client/public/`. `python design/texturen.py` → nahtlose Kacheln `paper.webp`/`board.webp`
+    (Zieltöne/Kontrast oben im Skript). Generierte Dateien nicht von Hand ändern.
+  - Icons: `<Icon name="…" />` (Maske, Farbe = currentColor) oder im CSS `var(--icon-<name>)` mit
+    `var(--icon-sprite)`/`var(--icon-sprite-size)` (z. B. `h2.scribbled::after`).
+  - Screenshots zur Sichtprüfung: `npx playwright test e2e/screens.spec.ts` → `test-results/screens/`
+    (mobil hell/dunkel, desktop). Der Test prüft auch auf horizontalen Overflow.
 - Wortliste: Arbeitsverzeichnis bereit, Sonnet-Agent arbeitet separat darin. Dessen Dateien in
   `wortliste/` (außer raw/arbeit) committet dieser Agent mit, **ohne Inhalte anzusehen**.
 

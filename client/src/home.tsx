@@ -1,6 +1,7 @@
-import { Logo } from './logo.tsx';
 import { useState } from 'preact/hooks';
 import { connection } from './connection.ts';
+import { Icon } from './icon.tsx';
+import { Logo } from './logo.tsx';
 
 const NAME_KEY = 'schwindelex.name';
 
@@ -50,7 +51,10 @@ export function Home({ notice }: { notice: string | null }) {
 
       {!hosting ? (
         <form key="join" onSubmit={join}>
-          <h2>Mitspielen</h2>
+          <h2 class="scribbled">
+            <Icon name="people" />
+            Mitspielen
+          </h2>
           <label>
             Spielcode
             <input
@@ -74,7 +78,10 @@ export function Home({ notice }: { notice: string | null }) {
         </form>
       ) : (
         <form key="host" onSubmit={create}>
-          <h2>Neues Spiel</h2>
+          <h2 class="scribbled">
+            <Icon name="crown" />
+            Neues Spiel
+          </h2>
           <label>
             Host-PIN
             <input type="password" value={pin} autoComplete="off" onInput={(e) => setPin(e.currentTarget.value)} />

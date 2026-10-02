@@ -1,4 +1,5 @@
 import { useConnection } from './connection.ts';
+import { Icon } from './icon.tsx';
 import { Home } from './home.tsx';
 import { Lobby } from './lobby.tsx';
 import { Finished, Reveal } from './reveal.tsx';
@@ -12,11 +13,13 @@ export function App() {
     <>
       {state.status !== 'online' && (
         <p class="status" role="status">
+          <Icon name={state.status === 'connecting' ? 'hourglass' : 'plug'} />
           {state.status === 'connecting' ? 'Verbinde…' : 'Verbindung weg – verbinde neu…'}
         </p>
       )}
       {state.error && (
         <p class="error" role="alert">
+          <Icon name="exclamation" />
           {ERROR_TEXT[state.error]}
         </p>
       )}

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { PlayerView, RoundView } from '../../shared/protocol.ts';
 import { connection } from './connection.ts';
+import { Icon } from './icon.tsx';
 import { Countdown, noteColor, PlayerList, tilt } from './parts.tsx';
 import { POS_TEXT } from './texts.ts';
 
@@ -82,9 +83,11 @@ export function Writing({ view, offset }: { view: PlayerView; offset: number }) 
         </p>
         <div class="buttons">
           <button type="submit" class="primary">
-            {answer?.submitted ? 'Abgegeben ✓' : 'OK'}
+            <Icon name={answer?.submitted ? 'check' : 'pencil'} />
+            {answer?.submitted ? 'Abgegeben' : 'OK'}
           </button>
           <button type="button" onClick={clear}>
+            <Icon name="eraser" />
             Löschen
           </button>
         </div>
@@ -100,6 +103,7 @@ export function Judging({ view }: { view: PlayerView }) {
     <main>
       <WordHeader round={view.round!} />
       <p class="notice" role="status">
+        <Icon name="hourglass" class="sorting" />
         Die Zettel werden sortiert…
       </p>
     </main>
@@ -112,7 +116,10 @@ export function Voting({ view, offset }: { view: PlayerView; offset: number }) {
     <main>
       <WordHeader round={round} />
       <Countdown deadline={round.deadline} offset={offset} />
-      <h2>Welche Erklärung stimmt?</h2>
+      <h2 class="scribbled">
+        <Icon name="question" />
+        Welche Erklärung stimmt?
+      </h2>
       <ul class="stacks">
         {round.stacks!.map((s) => {
           const seed = `${round.number}:${s.id}`;

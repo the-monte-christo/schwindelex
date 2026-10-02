@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
 import type { PlayerSummary, PlayerView } from '../../shared/protocol.ts';
+import { Icon } from './icon.tsx';
 
 export function inviteLink(code: string): string {
   return `${location.origin}/?c=${code}`;
@@ -41,7 +42,7 @@ export function Countdown({ deadline, offset }: { deadline: number | null; offse
   if (deadline === null) return null;
   return (
     <p class="countdown" role="timer" aria-label="Restzeit" data-urgent={seconds <= 10}>
-      ⏱ {seconds} s
+      <Icon name="stopwatch" /> {seconds} s
     </p>
   );
 }
@@ -52,10 +53,12 @@ export function PlayerList({ view, doneLabel }: { view: PlayerView; doneLabel: s
     <ul class="players" aria-label="Spieler">
       {view.players.map((p) => (
         <li key={p.id} data-done={p.done} data-offline={!p.connected} style={tilt(p.id, 2)}>
-          {p.id === view.hostId && view.phase === 'lobby' && '👑 '}
+          {p.id === view.hostId && view.phase === 'lobby' && <Icon name="crown" />}
+          {!p.connected && <Icon name="plug" />}
           {p.name}
           {p.id === view.me && ' (du)'}
           <span class="tag-status">{statusText(p, doneLabel)}</span>
+          {p.done && p.connected && <Icon name="check" />}
         </li>
       ))}
     </ul>
@@ -72,7 +75,10 @@ function statusText(p: PlayerSummary, doneLabel: string): string {
 export function InviteOverlay({ code, onClose }: { code: string; onClose: () => void }) {
   return (
     <div class="overlay" role="dialog" aria-label="Mitspieler einladen">
-      <h2>Mitspieler einladen</h2>
+      <h2 class="scribbled">
+        <Icon name="people" />
+        Mitspieler einladen
+      </h2>
       <Invite code={code} />
       <button onClick={onClose}>Schließen</button>
     </div>
@@ -101,7 +107,10 @@ export function Invite({ code }: { code: string }) {
       <p>
         <a href={link}>{link}</a>
       </p>
-      <button onClick={share}>{copied ? 'Link kopiert ✓' : 'Link teilen'}</button>
+      <button onClick={share}>
+        <Icon name="share" />
+        {copied ? 'Link kopiert' : 'Link teilen'}
+      </button>
     </section>
   );
 }

@@ -1,0 +1,56 @@
+/* Generiert von design/zerschneiden.py – nicht von Hand ändern. */
+:root {
+  --icon-sprite: url('./assets/icons.webp');
+  --icon-sprite-size: 500% 500%;
+  --icon-crown: 0% 0%;
+  --icon-check: 25% 0%;
+  --icon-stopwatch: 50% 0%;
+  --icon-hourglass: 75% 0%;
+  --icon-trophy: 100% 0%;
+  --icon-medal: 0% 25%;
+  --icon-pencil: 25% 25%;
+  --icon-eraser: 50% 25%;
+  --icon-question: 75% 25%;
+  --icon-bulb: 100% 25%;
+  --icon-magnifier: 0% 50%;
+  --icon-paperball: 25% 50%;
+  --icon-share: 50% 50%;
+  --icon-people: 75% 50%;
+  --icon-exit: 100% 50%;
+  --icon-plug: 0% 75%;
+  --icon-arrow: 25% 75%;
+  --icon-underline: 50% 75%;
+  --icon-circle: 75% 75%;
+  --icon-star: 100% 75%;
+  --icon-burst: 0% 100%;
+  --icon-spiral: 25% 100%;
+  --icon-sparkles: 50% 100%;
+  --icon-scribble: 75% 100%;
+  --icon-exclamation: 100% 100%;
+}
+
+.icon-crown { --icon-pos: var(--icon-crown); }
+.icon-check { --icon-pos: var(--icon-check); }
+.icon-stopwatch { --icon-pos: var(--icon-stopwatch); }
+.icon-hourglass { --icon-pos: var(--icon-hourglass); }
+.icon-trophy { --icon-pos: var(--icon-trophy); }
+.icon-medal { --icon-pos: var(--icon-medal); }
+.icon-pencil { --icon-pos: var(--icon-pencil); }
+.icon-eraser { --icon-pos: var(--icon-eraser); }
+.icon-question { --icon-pos: var(--icon-question); }
+.icon-bulb { --icon-pos: var(--icon-bulb); }
+.icon-magnifier { --icon-pos: var(--icon-magnifier); }
+.icon-paperball { --icon-pos: var(--icon-paperball); }
+.icon-share { --icon-pos: var(--icon-share); }
+.icon-people { --icon-pos: var(--icon-people); }
+.icon-exit { --icon-pos: var(--icon-exit); }
+.icon-plug { --icon-pos: var(--icon-plug); }
+.icon-arrow { --icon-pos: var(--icon-arrow); }
+.icon-underline { --icon-pos: var(--icon-underline); }
+.icon-circle { --icon-pos: var(--icon-circle); }
+.icon-star { --icon-pos: var(--icon-star); }
+.icon-burst { --icon-pos: var(--icon-burst); }
+.icon-spiral { --icon-pos: var(--icon-spiral); }
+.icon-sparkles { --icon-pos: var(--icon-sparkles); }
+.icon-scribble { --icon-pos: var(--icon-scribble); }
+.icon-exclamation { --icon-pos: var(--icon-exclamation); }

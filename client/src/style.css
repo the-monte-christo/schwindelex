@@ -1,4 +1,5 @@
 @import '@fontsource/patrick-hand/latin-400.css';
+@import './icons.gen.css';
 
 /* ================================================================
    Schwindelex – Papier, Post-its, Tinte, Tafel, Kreide.
@@ -8,7 +9,7 @@
 :root {
   color-scheme: light dark;
 
-  --paper: #f6f0e1;
+  --paper: #ebe3d1;
   --paper-edge: #e7dcc3;
   --ink: #1f2a44;
   --ink-soft: #55607a;
@@ -37,12 +38,12 @@
   --wobbly: 255px 12px 225px 14px / 14px 225px 12px 255px;
   --wobbly-2: 12px 225px 14px 255px / 255px 14px 225px 12px;
 
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  --tex: url('./assets/paper.webp');
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #26302b;
+    --paper: #28322d;
     --paper-edge: #1c2420;
     --ink: #f1efe4;
     --ink-soft: #b9c0b4;
@@ -64,7 +65,7 @@
     --shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.35);
     --shadow-lift: 0 2px 2px rgba(0, 0, 0, 0.35), 0 12px 26px rgba(0, 0, 0, 0.45);
 
-    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 .95 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+    --tex: url('./assets/board.webp');
   }
 }
 
@@ -86,7 +87,7 @@ body {
   min-height: 100dvh;
   padding: 0 16px calc(32px + env(safe-area-inset-bottom));
   color: var(--ink);
-  background: var(--grain), var(--paper);
+  background: var(--tex) 0 0 / 512px 512px repeat var(--paper);
   font-family: var(--ui);
   font-size: 17px;
   line-height: 1.4;
@@ -225,6 +226,13 @@ button:disabled {
 button.primary {
   background: var(--note-yellow);
   color: var(--on-note);
+}
+
+button.primary:disabled {
+  background: transparent;
+  color: var(--ink);
+  border-style: dashed;
+  opacity: 0.55;
 }
 
 button[aria-pressed='true'] {
@@ -405,8 +413,8 @@ button.note[aria-pressed='true'] {
   padding: 18px 20px 20px;
   color: #f2f0e6;
   background:
-    var(--grain),
-    radial-gradient(120% 80% at 30% 20%, #3c4b43, #26302b 70%);
+    radial-gradient(120% 90% at 30% 20%, transparent 40%, rgba(0, 0, 0, 0.35)),
+    url('./assets/board.webp') 0 0 / 512px 512px repeat #28322d;
   border: 8px solid #8a6a46;
   border-radius: 6px;
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.35), var(--shadow);
@@ -491,9 +499,6 @@ button.note[aria-pressed='true'] {
   color: var(--green);
 }
 
-.players li[data-done='true']::after {
-  content: ' ✓';
-}
 
 .players li[data-offline='true'] {
   opacity: 0.5;
@@ -550,7 +555,7 @@ button.note[aria-pressed='true'] {
   z-index: 20;
   overflow: auto;
   padding: 24px 16px;
-  background: var(--grain), var(--paper);
+  background: var(--tex) 0 0 / 512px 512px repeat var(--paper);
   animation: drop-in 0.25s ease-out;
 }
 
@@ -711,6 +716,121 @@ footer {
   color: var(--ink-soft);
 }
 
+/* ---------------- Icons & Kritzeleien (Sprite, Farbe = currentColor) ---------------- */
+
+.icon {
+  display: inline-block;
+  flex: none;
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+  background-color: currentColor;
+  -webkit-mask: var(--icon-sprite) var(--icon-pos, 0 0) / var(--icon-sprite-size) no-repeat;
+  mask: var(--icon-sprite) var(--icon-pos, 0 0) / var(--icon-sprite-size) no-repeat;
+}
+
+button .icon,
+h2 .icon,
+.truth .icon,
+.notice .icon,
+.status .icon,
+.error .icon {
+  margin-right: 0.3em;
+}
+
+.players .icon {
+  margin-right: 0.15em;
+}
+
+.players li[data-done='true'] .icon-check {
+  margin: 0 0 0 0.25em;
+}
+
+/* Wellenlinie unter Abschnittsüberschriften */
+h2.scribbled {
+  position: relative;
+  display: inline-block;
+  padding-right: 8px;
+}
+
+h2.scribbled::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  height: 22px;
+  background: currentColor;
+  opacity: 0.5;
+  -webkit-mask: var(--icon-sprite) var(--icon-underline) / var(--icon-sprite-size) no-repeat;
+  mask: var(--icon-sprite) var(--icon-underline) / var(--icon-sprite-size) no-repeat;
+  pointer-events: none;
+}
+
+/* gekritzelter Kreis um den Spielcode */
+.invite .code {
+  position: relative;
+  margin: 6px 0 4px;
+}
+
+.invite .code::before {
+  content: '';
+  position: absolute;
+  inset: -22px -26px -20px -22px;
+  background: var(--red);
+  opacity: 0.75;
+  -webkit-mask: var(--icon-sprite) var(--icon-circle) / var(--icon-sprite-size) no-repeat;
+  mask: var(--icon-sprite) var(--icon-circle) / var(--icon-sprite-size) no-repeat;
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+/* Sortieren: Sanduhr dreht sich */
+.sorting {
+  display: block;
+  margin: 32px auto 8px;
+  font-size: 4rem;
+  animation: flip 1.6s ease-in-out infinite;
+}
+
+/* Sieger: Pokal mit Stern-Explosion dahinter */
+.podium .icon-trophy,
+.podium .icon-medal {
+  margin-right: 0.3em;
+}
+
+.podium li[data-place='1'] {
+  position: relative;
+  overflow: visible;
+}
+
+.podium li[data-place='1'] .icon-trophy {
+  position: relative;
+  font-size: 1.3em;
+  margin-right: 0.45em;
+}
+
+.burst {
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  width: 2.6em;
+  height: 2.6em;
+  margin-top: -1.3em;
+  color: var(--red);
+  opacity: 0.7;
+  animation: spin 12s linear infinite;
+}
+
+.podium li[data-place='1'] .sparkles {
+  position: absolute;
+  right: 14px;
+  top: -14px;
+  font-size: 1.6em;
+  color: var(--red);
+  animation: pop 0.5s ease-out both 1s;
+}
+
 /* ---------------- Breite Bildschirme ---------------- */
 
 @media (min-width: 720px) {
@@ -749,6 +869,23 @@ footer {
 @keyframes pulse {
   50% {
     transform: scale(1.06);
+  }
+}
+
+@keyframes flip {
+  0%,
+  40% {
+    transform: rotate(0deg);
+  }
+  60%,
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 

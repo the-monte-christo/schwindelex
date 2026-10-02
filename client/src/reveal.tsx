@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks';
 import type { PlayerView } from '../../shared/protocol.ts';
 import { connection } from './connection.ts';
+import { Icon } from './icon.tsx';
 import { InviteOverlay, nameOf, noteColor, PlayerList, tilt } from './parts.tsx';
 
 function names(view: PlayerView, ids: string[]): string {
@@ -44,6 +45,7 @@ export function Reveal({ view }: { view: PlayerView }) {
       {reveal && (
         <>
           <p class="truth">
+            <Icon name="bulb" />
             Richtig: <strong>{reveal.definition}</strong>
           </p>
           <ul class="stacks revealed">
@@ -72,7 +74,10 @@ export function Reveal({ view }: { view: PlayerView }) {
         </>
       )}
 
-      <h2>Punkte</h2>
+      <h2 class="scribbled">
+        <Icon name="star" />
+        Punkte
+      </h2>
       <Scoreboard view={view} />
 
       {me?.pending ? (
@@ -83,12 +88,14 @@ export function Reveal({ view }: { view: PlayerView }) {
             Weiter
           </button>
           <button aria-pressed={round.myDecision === 'pass'} onClick={() => connection.send({ t: 'decide', decision: 'pass' })}>
+            <Icon name="paperball" />
             Passen
           </button>
         </div>
       )}
       <PlayerList view={view} doneLabel="hat entschieden" />
       <button class="link" onClick={() => setInviting(true)}>
+        <Icon name="people" />
         Mitspieler einladen
       </button>
       {inviting && <InviteOverlay code={view.code} onClose={() => setInviting(false)} />}
@@ -104,7 +111,15 @@ export function Finished({ view }: { view: PlayerView }) {
       <ol class="podium" aria-label="Endstand">
         {rows.map((p, i) => (
           <li key={p.id} data-place={p.place} style={{ ...tilt(p.id, 1.5), animationDelay: `${0.15 * (rows.length - i)}s` }}>
-            {p.place === 1 ? '🏆 ' : `${p.place}. `}
+            {p.place === 1 && (
+              <>
+                <Icon name="burst" class="burst" />
+                <Icon name="sparkles" class="sparkles" />
+                <Icon name="trophy" />
+              </>
+            )}
+            {p.place > 1 && p.place <= 3 && <Icon name="medal" />}
+            {`${p.place}. `}
             {p.name}: {p.score} {p.score === 1 ? 'Punkt' : 'Punkte'}
           </li>
         ))}
